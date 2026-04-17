@@ -55,3 +55,19 @@ else
   for f in "${FAILED[@]}"; do echo "  - $f"; done
   exit 1
 fi
+
+# -----------------------------------------------------------------------------
+# Manual-drop product photos (NOT fetched by this script)
+# -----------------------------------------------------------------------------
+# The Shop section (#shop in index.html) references three product photos that
+# do NOT exist on the legacy WordPress site. Joe needs to shoot / supply them
+# and drop them into ./images/ by the exact filenames below. Until then, the
+# <img> tags will 404 — alt text keeps the layout accessible.
+#
+#   ./images/product-beard-oil.jpg    — Angry Barber Beard Oil
+#   ./images/product-beard-balm.jpg   — Angry Barber Beard Balm
+#   ./images/product-beard-line.jpg   — Angry Barber Beard Line (shaping tool)
+#
+# Suggested framing: 4:5 portrait, product centered on a warm/neutral surface,
+# ~1200px on the short edge, JPG quality 80. Keep the file names as listed.
+# -----------------------------------------------------------------------------

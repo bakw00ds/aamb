@@ -627,6 +627,123 @@
     .btn-cream { background: var(--cream); color: var(--ink); border-color: var(--cream); }
     .btn-cream:hover { background: var(--paper); transform: translateY(-1px); }
 
+    /* ---------- Shop ---------- */
+    .shop { background: var(--cream); }
+    .product-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px 36px;
+    }
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      opacity: 0;
+      transform: translateY(18px) rotate(var(--rot, 0deg));
+      transition: opacity .7s ease, transform .35s ease, box-shadow .35s ease;
+    }
+    .product-card.is-in {
+      opacity: 1;
+      transform: translateY(0) rotate(var(--rot, 0deg));
+    }
+    .product-card:nth-child(odd)  { --rot: -0.75deg; }
+    .product-card:nth-child(even) { --rot: 0.75deg; }
+    .product-card:hover { transform: translateY(-4px) rotate(0deg); }
+
+    .product-frame {
+      background: var(--paper);
+      padding: 12px 12px 36px;
+      box-shadow: 0 18px 30px -14px rgba(0,0,0,0.35);
+      position: relative;
+      transition: box-shadow .35s ease;
+    }
+    .product-card:hover .product-frame { box-shadow: 0 26px 38px -16px rgba(0,0,0,0.45); }
+    .product-frame img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      background: var(--cream-deep);
+    }
+    .product-frame figcaption {
+      position: absolute;
+      left: 0; right: 0; bottom: 10px;
+      text-align: center;
+      font-family: var(--font-stamp);
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: var(--ink);
+      opacity: 0.85;
+    }
+    .product-body { padding: 22px 6px 0; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .product-name {
+      font-family: var(--font-head);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0;
+      color: var(--ink);
+    }
+    .product-desc {
+      font-style: italic;
+      font-size: 15.5px;
+      color: var(--ink-soft);
+      margin: 0;
+      max-width: 32ch;
+    }
+    .product-price {
+      font-family: var(--font-display);
+      font-size: 34px;
+      letter-spacing: 0.02em;
+      color: var(--oxblood);
+      line-height: 1;
+      margin-top: 2px;
+    }
+    .product-card .btn { margin-top: 10px; }
+
+    .shop-cta {
+      text-align: center;
+      margin-top: 64px;
+    }
+    .shop-cta .btn { padding: 16px 30px; font-size: 14px; }
+    .shop-cta-note {
+      display: block;
+      margin-top: 14px;
+      font-family: var(--font-stamp);
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+    }
+
+    .shop-trust {
+      max-width: 980px;
+      margin: 44px auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      border-top: 1px dashed rgba(20,18,16,0.2);
+      padding-top: 28px;
+      text-align: center;
+    }
+    .shop-trust-item .tlabel {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 22px;
+      letter-spacing: 0.06em;
+      color: var(--oxblood);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .shop-trust-item .tcopy {
+      font-style: italic;
+      font-size: 15px;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+
     /* ---------- Contact ---------- */
     .contact { background: var(--cream); }
     .contact-grid {
@@ -784,6 +901,8 @@
       .diffs-grid { grid-template-columns: 1fr; gap: 40px; }
       .review-grid { grid-template-columns: repeat(2, 1fr); }
       .gallery-grid { grid-template-columns: repeat(3, 1fr); }
+      .product-grid { grid-template-columns: repeat(2, 1fr); gap: 36px 28px; }
+      .shop-trust { grid-template-columns: 1fr; gap: 18px; }
       .price-board { padding: 40px 28px 36px; }
       .price-amt { font-size: 28px; }
       .hero { min-height: 70vh; padding: 64px 20px 70px; }
@@ -794,6 +913,7 @@
       .section { padding: 64px 20px; }
       .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 18px; }
       .review-grid { grid-template-columns: 1fr; }
+      .product-grid { grid-template-columns: 1fr; gap: 32px; }
       .mobile-book { display: block; }
       body { padding-bottom: 58px; }
       .price-name { font-size: 15px; white-space: normal; }
@@ -803,12 +923,12 @@
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       .marquee-track { animation: none; padding-left: 0; }
-      .section-head, .price-board, .about-grid, .gallery-item, .review-card, .diff-item {
+      .section-head, .price-board, .about-grid, .gallery-item, .review-card, .diff-item, .product-card {
         opacity: 1 !important;
         transform: none !important;
         transition: none !important;
       }
-      .gallery-item { transform: none !important; }
+      .gallery-item, .product-card { transform: none !important; }
     }
 
     /* Focus states */
@@ -844,7 +964,7 @@
 
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
-      <span>Clean Cuts</span><span>Burly Beards</span><span>Smooth Shaves</span><span>Cold Beer On Tap</span><span>Shuffleboard</span><span>Walk-Ins Welcome</span><span>First Responder Discount</span><span>Frederick MD Since 2004</span><span>Clean Cuts</span><span>Burly Beards</span><span>Smooth Shaves</span><span>Cold Beer On Tap</span><span>Shuffleboard</span><span>Walk-Ins Welcome</span><span>First Responder Discount</span><span>Frederick MD Since 2004</span>
+      <span>Clean Cuts</span><span>Burly Beards</span><span>Smooth Shaves</span><span>Cold Beer On Tap</span><span>Shuffleboard</span><span>Angry Barber Products In Stock</span><span>Walk-Ins Welcome</span><span>First Responder Discount</span><span>Frederick MD Since 2004</span><span>Clean Cuts</span><span>Burly Beards</span><span>Smooth Shaves</span><span>Cold Beer On Tap</span><span>Shuffleboard</span><span>Angry Barber Products In Stock</span><span>Walk-Ins Welcome</span><span>First Responder Discount</span><span>Frederick MD Since 2004</span>
     </div>
   </div>
 
@@ -859,8 +979,7 @@
         <a href="#services">Services</a>
         <a href="#gallery">Gallery</a>
         <a href="#reviews">Reviews</a>
-        <!-- TODO: Replace REPLACE_WITH_SHOPIFY_STORE_URL with Joe's Shopify store URL for Angry Barber product line -->
-        <a href="REPLACE_WITH_SHOPIFY_STORE_URL" target="_blank" rel="noopener">Shop</a>
+        <a href="#shop">Shop</a>
         <a href="https://aambarbershop.com/blog/" target="_blank" rel="noopener">Blog</a>
         <a href="#contact">Visit</a>
       </nav>
@@ -1073,6 +1192,79 @@
       </div>
     </section>
 
+    <section class="section shop" id="shop" aria-labelledby="shop-h">
+      <div class="section-head">
+        <div class="eyebrow">— In-House Product Line —</div>
+        <h2 id="shop-h">Angry Barber · Beard &amp; Blade</h2>
+        <p>Handcrafted beard balms, oils, and grooming essentials — blended and packaged right here in Frederick.</p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card">
+          <figure class="product-frame">
+            <img src="./images/product-beard-oil.jpg" alt="Amber glass bottle of Angry Barber Beard Oil" loading="lazy" width="480" height="600">
+            <figcaption>BEARD OIL</figcaption>
+          </figure>
+          <div class="product-body">
+            <h3 class="product-name">Angry Barber Beard Oil</h3>
+            <p class="product-desc">Hand-blended cedar, sandalwood, and a drop of stubbornness. Keeps the burly beard soft and your neighbors jealous.</p>
+            <div class="product-price">$22</div>
+            <!-- TODO: Replace REPLACE_WITH_SQUARE_PRODUCT_1_URL with the Square Online product URL for Angry Barber Beard Oil -->
+            <a class="btn btn-dark btn-sm" href="REPLACE_WITH_SQUARE_PRODUCT_1_URL" target="_blank" rel="noopener">View In Shop</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <figure class="product-frame">
+            <img src="./images/product-beard-balm.jpg" alt="Tin of Angry Barber Beard Balm on a shop counter" loading="lazy" width="480" height="600">
+            <figcaption>BEARD BALM</figcaption>
+          </figure>
+          <div class="product-body">
+            <h3 class="product-name">Angry Barber Beard Balm</h3>
+            <p class="product-desc">Shea butter and beeswax with a hint of tobacco leaf. Tames flyaways and holds shape all day.</p>
+            <div class="product-price">$24</div>
+            <!-- TODO: Replace REPLACE_WITH_SQUARE_PRODUCT_2_URL with the Square Online product URL for Angry Barber Beard Balm -->
+            <a class="btn btn-dark btn-sm" href="REPLACE_WITH_SQUARE_PRODUCT_2_URL" target="_blank" rel="noopener">View In Shop</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <figure class="product-frame">
+            <img src="./images/product-beard-line.jpg" alt="Angry Barber Beard Line — a precision beard-shaping tool" loading="lazy" width="480" height="600">
+            <figcaption>BEARD LINE</figcaption>
+          </figure>
+          <div class="product-body">
+            <h3 class="product-name">Angry Barber Beard Line</h3>
+            <p class="product-desc">The same beard-shaping tool we use in the shop. Precision lines, even from the passenger seat.</p>
+            <div class="product-price">$18</div>
+            <!-- TODO: Replace REPLACE_WITH_SQUARE_PRODUCT_3_URL with the Square Online product URL for Angry Barber Beard Line -->
+            <a class="btn btn-dark btn-sm" href="REPLACE_WITH_SQUARE_PRODUCT_3_URL" target="_blank" rel="noopener">View In Shop</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="shop-cta">
+        <!-- TODO: Replace REPLACE_WITH_SQUARE_STORE_URL with Joe's Square Online store URL for the Angry Barber product line -->
+        <a class="btn btn-primary" href="REPLACE_WITH_SQUARE_STORE_URL" target="_blank" rel="noopener">Visit The Full Shop →</a>
+        <span class="shop-cta-note">Secure checkout by Square · Ships from Frederick, MD</span>
+      </div>
+
+      <div class="shop-trust">
+        <div class="shop-trust-item">
+          <span class="tlabel">Handcrafted</span>
+          <p class="tcopy">Small-batch, made in-shop.</p>
+        </div>
+        <div class="shop-trust-item">
+          <span class="tlabel">Ship or Pick Up</span>
+          <p class="tcopy">Grab it next time you're in the chair.</p>
+        </div>
+        <div class="shop-trust-item">
+          <span class="tlabel">Used By Our Barbers</span>
+          <p class="tcopy">Every product we sell, we use daily.</p>
+        </div>
+      </div>
+    </section>
+
     <section class="section contact" id="contact" aria-labelledby="contact-h">
       <div class="section-head">
         <div class="eyebrow">— Stop In —</div>
@@ -1156,8 +1348,8 @@
         <h4>Off-Site</h4>
         <ul>
           <li><a href="https://aambarbershop.com/blog/" target="_blank" rel="noopener">Blog</a></li>
-          <!-- TODO: Replace REPLACE_WITH_SHOPIFY_STORE_URL with Joe's Shopify store URL for Angry Barber product line -->
-          <li><a href="REPLACE_WITH_SHOPIFY_STORE_URL" target="_blank" rel="noopener">Shop</a></li>
+          <!-- TODO: Replace REPLACE_WITH_SQUARE_STORE_URL with Joe's Square Online store URL for the Angry Barber product line -->
+          <li><a href="REPLACE_WITH_SQUARE_STORE_URL" target="_blank" rel="noopener">Shop · Angry Barber</a></li>
           <li><a href="https://aambarbershop.com/first-responders/" target="_blank" rel="noopener">First Responders</a></li>
           <li><a href="https://na0.meevo.com/OnlineBookingApp/login?tenantId=104105&locationId=107260" target="_blank" rel="noopener">Book An Appointment</a></li>
         </ul>
@@ -1199,9 +1391,9 @@
             }
           });
         }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-        document.querySelectorAll('.section-head, .price-board, .about-grid, .gallery-item, .review-card, .diff-item').forEach(function (el) { io.observe(el); });
+        document.querySelectorAll('.section-head, .price-board, .about-grid, .gallery-item, .review-card, .diff-item, .product-card').forEach(function (el) { io.observe(el); });
       } else {
-        document.querySelectorAll('.section-head, .price-board, .about-grid, .gallery-item, .review-card, .diff-item').forEach(function (el) { el.classList.add('is-in'); });
+        document.querySelectorAll('.section-head, .price-board, .about-grid, .gallery-item, .review-card, .diff-item, .product-card').forEach(function (el) { el.classList.add('is-in'); });
       }
     })();
   </script>
