@@ -107,7 +107,13 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; letter-spacing
   padding: 10px 24px;
 }
 .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit; }
-.brand img { height: 96px; width: auto; }  /* Desktop default */
+.brand img {
+  height: 96px;
+  width: auto;
+  /* Logo.png is white-on-transparent (designed for dark bg). Invert + slight
+     darken so it reads as deep ink on the cream header. */
+  filter: invert(1) brightness(0.9);
+}
 .brand-est {
   display: inline-block;
   border: 1.5px solid var(--oxblood);
@@ -1197,25 +1203,12 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; letter-spacing
 }
 .footer a:hover { color: var(--brass-light); }
 .footer-col ul { list-style: none; padding: 0; margin: 0; }
-.footer-brand-card {
-  display: inline-block;
-  background: var(--paper);
-  padding: 14px 22px;
-  border: 1px solid var(--cream-deep);
-  box-shadow: 0 6px 18px -10px rgba(0,0,0,0.5);
-  position: relative;
-}
-.footer-brand-card::before {
-  content: "";
-  position: absolute; inset: 4px;
-  border: 1px solid rgba(20,18,16,0.15);
-  pointer-events: none;
-}
-.footer-brand-card img {
-  height: 86px;
+/* Footer logo: raw white-on-transparent asset directly on ink — no frame,
+   no filter, no background. Matches how the WP site presents it. */
+.footer-brand img {
+  height: 110px;
   width: auto;
   display: block;
-  position: relative;
 }
 .footer-brand p {
   font-family: var(--font-stamp);
@@ -1428,7 +1421,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; letter-spacing
   .price-board { padding: 40px 28px 36px; }
   .price-amt { font-size: 28px; }
   .gc-card { padding: 36px 28px 32px; }
-  .footer-brand-card img { height: 76px; }
+  .footer-brand img { height: 90px; }
   .footer-visit-qr img { width: 120px; }
 }
 
@@ -1452,8 +1445,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; letter-spacing
   .hero-scissors { display: none; }
   .map-embed iframe { height: 240px; }
   .footer-visit-qr { display: none; }
-  .footer-brand-card { padding: 12px 18px; }
-  .footer-brand-card img { height: 62px; }
+  .footer-brand img { height: 80px; }
   .socials { gap: 14px; }
   .socials a { width: 48px; height: 48px; }
   .socials svg { width: 20px; height: 20px; }
