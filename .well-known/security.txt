@@ -1,0 +1,4 @@
+Contact: mailto:REPLACE_WITH_JOES_EMAIL@example.com
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://aambarbershop.com/.well-known/security.txt

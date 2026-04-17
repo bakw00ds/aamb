@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemaps-image/0.9">
+  <url>
+    <loc>https://aambarbershop.com/</loc>
+    <lastmod>YYYY-MM-DD</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://aambarbershop.com/images/barbershop-hero.webp</image:loc>
+      <image:title>All About Men Barbershop — Frederick, MD</image:title>
+    </image:image>
+  </url>
+</urlset>

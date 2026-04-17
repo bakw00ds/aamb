@@ -273,17 +273,101 @@ Without this environment, the `environment:production` subject claim in step 7 w
 
 ---
 
-## 10. Recommended CloudFront response-headers policy
+## 10. CloudFront response-headers policy (required)
 
-Create a **Response Headers Policy** (CloudFront → Policies → Response headers → Create) with at minimum:
+Static sites don't get hacked via SQL injection — they get abused via header-less CDN configs. Create a **Response Headers Policy** (CloudFront → Policies → Response headers → Create) with **all** the headers below and attach it to the default cache behavior on **both** distributions.
 
-- **Strict-Transport-Security**: `max-age=31536000; includeSubDomains; preload`
-- **X-Content-Type-Options**: `nosniff`
-- **Referrer-Policy**: `strict-origin-when-cross-origin`
-- **Permissions-Policy**: `geolocation=(), microphone=(), camera=()`
-- **X-Frame-Options**: `DENY`
+| Header | Value | Why |
+| --- | --- | --- |
+| `Strict-Transport-Security` | `max-age=63072000; includeSubDomains; preload` | Forces HTTPS for 2y, covers subdomains, HSTS-preload eligible |
+| `X-Content-Type-Options` | `nosniff` | Blocks MIME-type confusion attacks |
+| `X-Frame-Options` | `DENY` | Blocks clickjacking via iframe embed |
+| `Referrer-Policy` | `strict-origin-when-cross-origin` | Prevents leaking full URL paths on outbound clicks |
+| `Permissions-Policy` | `geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=()` | Denies browser APIs we don't use |
+| `Cross-Origin-Opener-Policy` | `same-origin` | Browsing-context isolation |
+| `Cross-Origin-Resource-Policy` | `same-origin` | Prevents cross-site embedding of our resources |
+| `Content-Security-Policy` | *see below* | Restricts script/style/image/font/frame origins |
 
-Attach to the default cache behavior on **both** distributions.
+### CSP — copy-pasteable string
+
+```
+default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://aambarbershop.com; connect-src 'self'; frame-src 'self' https://www.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests
+```
+
+**Notes on the directives:**
+
+- `'unsafe-inline'` on `script-src` and `style-src` is **load-bearing** because `index.html` uses inline `<style>` and `<script>`. To drop it, extract inline JS/CSS into `/app.js` + `/app.css` with SRI hashes — deferred tech-debt, not blocking launch.
+- `img-src https://aambarbershop.com` allows the absolute OG image URL used in `<meta property="og:image">`. If OG is moved to a relative path, you can remove this allowance.
+- `frame-src 'self' https://www.google.com` permits the embedded Google Map iframe on the Contact section.
+- `frame-ancestors 'none'` prevents others from embedding us (complementary to `frame-src`; opposite direction).
+- `form-action 'self' mailto:` permits the contact form's runtime-assembled `mailto:` action until it's replaced by a real backend endpoint.
+
+**Do not set CSP via `<meta http-equiv>` in the HTML** — the CloudFront response-headers policy is the single source of truth. A meta-tag version can't enforce `frame-ancestors` and can be stripped or modified in transit.
+
+### Validating the policy
+
+After attaching, run:
+
+```bash
+curl -sI https://staging.aambarbershop.com | grep -i -E "^(strict-transport|x-content|x-frame|referrer|permissions|cross-origin|content-security)"
+```
+
+All eight headers should appear.
+
+---
+
+## 11. AWS WAF — optional hardening
+
+A Web ACL in front of CloudFront adds an inexpensive layer of protection against the most common automated abuse (credential stuffing, WordPress-probe traffic, aggressive scrapers). **Recommended but optional** for a low-traffic local business — turn on if the bill spikes suspiciously or if the site gets unwanted attention.
+
+### What to turn on
+
+Attach a **WAFv2 Web ACL** (CLOUDFRONT scope) to both distributions, with:
+
+- **Managed rule groups** (AWS-provided, free to enable but metered per request):
+  - `AWSManagedRulesCommonRuleSet` — baseline protection
+  - `AWSManagedRulesKnownBadInputsRuleSet` — blocks known exploit payloads
+  - `AWSManagedRulesAmazonIpReputationList` — blocks AWS-flagged bad IPs
+- **Rate-based rule** — 1000 requests per 5 minutes per source IP → **Block**. This is enough headroom for a real browsing human and punishes scrapers.
+- Enable sampled-requests logging so you can see what's being blocked.
+
+### Cost envelope (10K visits/day)
+
+- Web ACL: **$5/mo**
+- Managed rule groups: **$1/mo each × 3 = $3/mo**
+- Requests: **$0.60 per million** (10K/day → 300K/mo → ~$0.20)
+- **Total: ~$8–10/mo**, occasionally higher if the rate-based rule fires on a big scrape.
+
+### Quick CLI (abbreviated)
+
+```bash
+# Create the Web ACL
+aws wafv2 create-web-acl \
+  --name aam-site \
+  --scope CLOUDFRONT \
+  --region us-east-1 \
+  --default-action Allow={} \
+  --visibility-config SampledRequestsEnabled=true,CloudWatchMetricsEnabled=true,MetricName=aam-site \
+  --rules file://waf-rules.json
+
+# Then associate with each distribution via the CloudFront console or:
+aws cloudfront update-distribution ...
+```
+
+Rule-definition JSON is verbose; the AWS console is honestly faster for a one-time setup.
+
+---
+
+## 12. Local SEO — things the site alone can't fix
+
+Local rankings for a barbershop are 80% **off-site** signals. The site is the table stakes; these are the actual wins.
+
+1. **Claim and fully fill out the Google Business Profile** (`business.google.com`). Every field. Services menu with prices (keep it in sync with the two price boards in `index.html`). Attributes (wheelchair accessible, LGBTQ+ friendly, kid-friendly, etc). Photos — post 5+ per month for the first quarter. Use **Google Posts** weekly for 3 months to kickstart engagement. This single lever outweighs almost everything else.
+2. **NAP (Name, Address, Phone) consistency** across Google Business, Facebook, Yelp, Apple Maps, Bing Places, Yellow Pages, Foursquare, and the website footer — **exactly the same formatting**. `1700 Kingfisher Dr. Suite 8, Frederick, MD 21701` / `(301) 682-9992`. Inconsistencies (`Ste` vs `Suite`, missing dot, different area-code format) actively confuse ranking.
+3. **Request reviews** — target 50+ Google reviews at a 4.7+ average. Reviews are the single biggest local ranking factor after NAP. Ask every satisfied customer to drop one; the review CTAs on the site link directly to the Google + Yelp review forms.
+4. **Local citations** — Yelp, Apple Business Connect, Bing Places, Yellow Pages, Foursquare. All free. One focused hour of data entry pays dividends.
+5. **Search Console + Bing Webmaster Tools** — submit the sitemap (`/sitemap.xml`) to both once the site is live on the real domain. Check for crawl errors monthly. Watch "Performance" for organic queries to understand what people are actually searching.
+6. **Monitor the WordPress blog**. If the live WP site is retired during this migration, redirect the old URLs or keep them live on `blog.aambarbershop.com`. Dropped URLs cost ranking.
 
 ---
 

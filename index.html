@@ -3,18 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#141210">
-  <title>All About Men Barbershop — Frederick, MD · Est. 2004</title>
-  <meta name="description" content="Clean cuts, burly beards, smooth shaves. A proper men's barbershop in Frederick, MD since 2004. Cold beer on tap, shuffleboard, and first-responder friendly.">
+  <meta name="theme-color" content="#8a1a1a">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <title>All About Men Barbershop · Clean Cuts &amp; Beard Shaves in Frederick, MD</title>
+  <meta name="description" content="Frederick's premier men's barbershop since 2004. Precision cuts, burly beards, and smooth straight-razor shaves — enjoy a cold beer and a round of shuffleboard with your haircut.">
   <meta name="author" content="All About Men Barbershop">
   <link rel="canonical" href="https://aambarbershop.com/">
 
-  <meta property="og:title" content="All About Men Barbershop — Frederick, MD">
-  <meta property="og:description" content="Clean cuts, burly beards, smooth shaves. Since 2004.">
+  <!-- Open Graph -->
+  <meta property="og:site_name" content="All About Men Barbershop">
+  <meta property="og:title" content="All About Men Barbershop · Frederick, MD">
+  <meta property="og:description" content="Clean cuts, burly beards, smooth shaves. Frederick's proper men's barbershop since 2004.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://aambarbershop.com/">
+  <meta property="og:locale" content="en_US">
+  <!-- TODO: Replace with a dedicated 1200x630 OG image when available; barbershop-hero is a stand-in. -->
   <meta property="og:image" content="https://aambarbershop.com/images/barbershop-hero.webp">
+  <meta property="og:image:alt" content="Interior of All About Men Barbershop in Frederick, Maryland">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="All About Men Barbershop · Frederick, MD">
+  <meta name="twitter:description" content="Clean cuts, burly beards, smooth shaves. Frederick's proper men's barbershop since 2004.">
+  <meta name="twitter:image" content="https://aambarbershop.com/images/barbershop-hero.webp">
 
   <link rel="icon" href="./images/logo.png" type="image/png">
   <link rel="apple-touch-icon" href="./images/logo.png">
@@ -23,37 +37,214 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Alegreya:ital,wght@0,400;0,500;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
 
+  <!-- ===== JSON-LD 1 · LocalBusiness / HairSalon with full service catalog ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["HairSalon", "LocalBusiness"],
+    "@id": "https://aambarbershop.com/#business",
+    "name": "All About Men Barbershop",
+    "alternateName": "AAM Barbershop",
+    "description": "Frederick's premier barbershop since 2004. Clean cuts, burly beards, smooth shaves — enjoy a beer and a game of shuffleboard with your haircut.",
+    "url": "https://aambarbershop.com/",
+    "telephone": "+1-301-682-9992",
+    "image": [
+      "https://aambarbershop.com/images/barbershop-hero.webp",
+      "https://aambarbershop.com/images/shop-1.jpg",
+      "https://aambarbershop.com/images/front-desk.jpg"
+    ],
+    "logo": "https://aambarbershop.com/images/logo.png",
+    "priceRange": "$$",
+    "foundingDate": "2004",
+    "founder": { "@type": "Person", "name": "Joe Kline" },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1700 Kingfisher Dr. Suite 8",
+      "addressLocality": "Frederick",
+      "addressRegion": "MD",
+      "postalCode": "21701",
+      "addressCountry": "US"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 39.4483368, "longitude": -77.3833825 },
+    "hasMap": "https://maps.app.goo.gl/ALk6RgWmrNvg9Vys8",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "09:00", "closes": "19:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "08:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "16:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "15:00" }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/aambarbershop/",
+      "https://www.instagram.com/explore/locations/758358861/all-about-men-barbershop/",
+      "https://www.tiktok.com/@aambarbershop",
+      "https://www.youtube.com/channel/UCGd1t5qhKPvzYAwaJaH6pHg",
+      "https://www.pinterest.com/allaboutmenbarbershop/",
+      "https://www.google.com/maps/place/All+About+Men+Barber+Shop/@39.4483368,-77.3833825,17z/",
+      "https://www.yelp.com/biz/all-about-men-barber-shop-frederick"
+    ],
+    "paymentAccepted": ["Cash", "Check", "Credit Card", "Apple Pay"],
+    "currenciesAccepted": "USD",
+    "slogan": "Clean Cuts. Burly Beards. Smooth Shaves.",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Grooming Services",
+      "itemListElement": [
+        { "@type": "Offer", "priceCurrency": "USD", "price": "35", "itemOffered": { "@type": "Service", "name": "Men's Haircut" } },
+        { "@type": "Offer", "priceCurrency": "USD", "price": "43", "itemOffered": { "@type": "Service", "name": "Haircut & Beard Trim" } },
+        { "@type": "Offer", "priceCurrency": "USD", "price": "30", "itemOffered": { "@type": "Service", "name": "Children (10 & Under)" } },
+        { "@type": "Offer", "priceCurrency": "USD", "price": "27", "itemOffered": { "@type": "Service", "name": "Military, Fire & Police" } },
+        { "@type": "Offer", "priceCurrency": "USD", "price": "30", "itemOffered": { "@type": "Service", "name": "Veteran Cut" } },
+        { "@type": "Offer", "priceCurrency": "USD", "price": "25", "itemOffered": { "@type": "Service", "name": "Senior Citizens" } },
+        { "@type": "Offer", "priceCurrency": "USD", "price": "25", "itemOffered": { "@type": "Service", "name": "Buzz Cut" } },
+        { "@type": "Offer", "priceCurrency": "USD", "price": "37", "itemOffered": { "@type": "Service", "name": "Flat Top" } },
+        { "@type": "Offer", "priceCurrency": "USD", "price": "15", "itemOffered": { "@type": "Service", "name": "Beard Sculpt" } },
+        { "@type": "Offer", "priceCurrency": "USD", "price": "7", "itemOffered": { "@type": "Service", "name": "Shampoo" } },
+        { "@type": "Offer", "priceCurrency": "USD", "price": "13", "itemOffered": { "@type": "Service", "name": "Neck Shave" } },
+        { "@type": "Offer", "priceCurrency": "USD", "price": "10", "itemOffered": { "@type": "Service", "name": "Straight Razor Neck Shave" } },
+        { "@type": "Offer", "priceCurrency": "USD", "price": "23", "itemOffered": { "@type": "Service", "name": "Front & Back Neck Shave" } },
+        { "@type": "Offer", "priceCurrency": "USD", "price": "28", "itemOffered": { "@type": "Service", "name": "Beard Lineup & Neck Shave" } },
+        { "@type": "Offer", "priceCurrency": "USD", "price": "33", "itemOffered": { "@type": "Service", "name": "Beard Trim & Lineup" } },
+        { "@type": "Offer", "priceCurrency": "USD", "price": "50", "itemOffered": { "@type": "Service", "name": "Smooth Baby-Butt Bald Head Shave" } },
+        { "@type": "Offer", "priceCurrency": "USD", "price": "73", "itemOffered": { "@type": "Service", "name": "Bald Head Shave & Beard Lineup" } },
+        { "@type": "Offer", "priceCurrency": "USD", "price": "83", "itemOffered": { "@type": "Service", "name": "Bald Head Shave & Full Face Shave" } }
+      ]
+    }
+  }
+  </script>
+
+  <!-- ===== JSON-LD 2 · AggregateRating + individual Reviews (6 real testimonials) ===== -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "HairSalon",
+    "@id": "https://aambarbershop.com/#business",
     "name": "All About Men Barbershop",
-    "image": "https://aambarbershop.com/images/barbershop-hero.webp",
-    "url": "https://aambarbershop.com",
-    "telephone": "+1-301-682-9992",
-    "priceRange": "$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "5903 Urbana Pike, Suite 100",
-      "addressLocality": "Frederick",
-      "addressRegion": "MD",
-      "postalCode": "21704",
-      "addressCountry": "US"
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "bestRating": "5",
+      "worstRating": "1",
+      "reviewCount": "6"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 39.3604,
-      "longitude": -77.3825
-    },
-    "openingHoursSpecification": [
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "09:00", "closes": "19:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "09:00", "closes": "18:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "08:00", "closes": "16:00" },
-      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "00:00", "closes": "00:00" }
-    ],
-    "sameAs": [
-      "https://www.instagram.com/explore/locations/758358861/all-about-men-barbershop/",
-      "https://www.tiktok.com/@aambarbershop"
+    "review": [
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Michael S." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Kyleigh did an excellent job on my haircut and beard trim. Super friendly and easy to talk to. Love the atmosphere here, too!"
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Nicholas A." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Always get a great cut at All About Men Barber Shop. I recommend making an appointment online to avoid a wait. Appreciate that they provide a first responder discount!"
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Rosemary L." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Took my teenage son with long hair here for a haircut and he was very happy with the results. His barber listened to what he wanted and took his input into consideration throughout the entire process."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Reinaldo C." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "This place is awesome. They do great hair cuts for men and children alike. Friendly staff all around. I myself have been going there for the last 2 years and do not go to anyone else."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Mary B." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Took my grandsons, ages 14 and 6. They were both very happy with their haircuts and the stylists were great with them both. I highly recommend this place."
+      },
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Tiffani H." },
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "reviewBody": "Took my teenager in today who is very picky about their hair and tends to shed a few tears when in the chair. No tears today! Jeanne did a great job. She made sure she understood what they wanted and delivered. We will be back!"
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== JSON-LD 3 · BreadcrumbList ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://aambarbershop.com/"
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== JSON-LD 4 · FAQPage (text must match visible HTML verbatim) ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need an appointment, or can I walk in?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Walk-ins are welcome up until 15 minutes before close. Appointments are recommended — especially on Saturdays — to reduce wait time. Book online through our booking system or call us at (301) 682-9992."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a typical appointment last?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most cuts run 15 to 30 minutes. A haircut plus beard trim runs 30 to 45 minutes. Specialty shaves (like our Smooth Operator bald head shave) take about 30 minutes on their own."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What payment methods do you accept?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cash, check, and all major credit cards except American Express. We also accept Apple Pay. We do not accept Venmo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you sell gift cards?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — gift certificates are available in any amount. Call us at (301) 682-9992 to purchase one. They're always in stock, no waiting."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What products do you use and sell?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We use and retail Suavecito and our in-house Angry Barber line — beard balms, beard oils, and the Angry Barber Beard Line tool we use at the chair."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the beer real? Can I actually get a beer with my cut?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, beer is complimentary with a haircut — age permitting. We've got a real in-house bar and a shuffleboard table. This is not a gimmick."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the shop kid-friendly?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Very. We've got a dedicated kids' section with toys and video games, and many of our barbers specialize in cutting for kids who are picky or nervous in the chair."
+        }
+      }
     ]
   }
   </script>
@@ -109,8 +300,17 @@
     h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; letter-spacing: 0.02em; margin: 0; }
 
     .display { font-family: var(--font-display); letter-spacing: 0.03em; line-height: 0.95; }
-
     .stamp { font-family: var(--font-stamp); letter-spacing: 0.08em; text-transform: uppercase; }
+
+    .sr-only {
+      position: absolute !important;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
 
     /* ---------- Stripe + marquee ---------- */
     .stripe-bar { height: 14px; background: var(--stripe); }
@@ -151,15 +351,15 @@
       box-shadow: 0 2px 0 rgba(0,0,0,0.02), 0 10px 20px -14px rgba(0,0,0,0.25);
     }
     .header-inner {
-      max-width: 1200px;
+      max-width: 1280px;
       margin: 0 auto;
       display: flex;
       align-items: center;
-      gap: 24px;
-      padding: 14px 24px;
+      gap: 20px;
+      padding: 10px 24px;
     }
     .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; color: inherit; }
-    .brand img { height: 52px; width: auto; }
+    .brand img { height: 96px; width: auto; }  /* Desktop default */
     .brand-est {
       display: inline-block;
       border: 1.5px solid var(--oxblood);
@@ -171,12 +371,12 @@
       transform: rotate(-4deg);
     }
 
-    .nav { display: flex; gap: 22px; margin-left: auto; }
+    .nav { display: flex; gap: 18px; margin-left: auto; }
     .nav a {
       font-family: var(--font-head);
       text-transform: uppercase;
-      font-size: 13px;
-      letter-spacing: 0.16em;
+      font-size: 12.5px;
+      letter-spacing: 0.14em;
       color: var(--ink);
       text-decoration: none;
     }
@@ -217,8 +417,12 @@
     .btn-primary:hover { background: var(--oxblood-deep); color: var(--cream); transform: translateY(-1px); }
     .btn-ghost { background: transparent; color: var(--cream); border-color: var(--cream); }
     .btn-ghost:hover { background: var(--cream); color: var(--ink); }
+    .btn-ghost-ink { background: transparent; color: var(--ink); border-color: var(--ink); }
+    .btn-ghost-ink:hover { background: var(--ink); color: var(--cream); }
     .btn-dark { background: var(--ink); color: var(--cream); border-color: var(--ink); }
     .btn-dark:hover { background: var(--oxblood); border-color: var(--oxblood); }
+    .btn-cream { background: var(--cream); color: var(--ink); border-color: var(--cream); }
+    .btn-cream:hover { background: var(--paper); transform: translateY(-1px); }
     .btn-sm { padding: 9px 16px; font-size: 12px; }
 
     .hamburger {
@@ -235,31 +439,42 @@
     .hamburger span::before { top: -6px; }
     .hamburger span::after { top: 6px; }
 
-    /* ---------- Hero ---------- */
-    .hero {
+    /* ---------- Hero carousel ---------- */
+    .hero-carousel {
       position: relative;
-      min-height: 78vh;
       color: var(--cream);
       background: #000;
       overflow: hidden;
+      min-height: min(88vh, 820px);
+      isolation: isolate;
+    }
+    .slide {
+      position: absolute; inset: 0;
       display: flex;
       align-items: center;
-      padding: 90px 24px 100px;
+      padding: 90px 24px 120px;
+      opacity: 0;
+      transition: opacity .7s ease;
+      pointer-events: none;
     }
-    .hero-bg {
+    .slide.is-active { opacity: 1; pointer-events: auto; z-index: 2; }
+    .slide-bg {
       position: absolute; inset: 0;
-      background: url("./images/barbershop-hero.webp") center/cover no-repeat;
-      filter: saturate(0.85) contrast(1.05);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      filter: saturate(0.9) contrast(1.03);
+      z-index: 0;
     }
-    .hero-overlay {
+    .slide-overlay {
       position: absolute; inset: 0;
-      background:
-        linear-gradient(180deg, rgba(20,18,16,0.55) 0%, rgba(20,18,16,0.35) 40%, rgba(20,18,16,0.88) 100%),
-        radial-gradient(ellipse at 20% 30%, rgba(138,26,26,0.35), transparent 55%);
+      background: linear-gradient(135deg, rgba(20,18,16,0.85) 0%, rgba(20,18,16,0.55) 45%, rgba(138,26,26,0.4) 100%);
+      z-index: 1;
     }
-    .hero-grain { position: absolute; inset: 0; background-image: var(--grain); opacity: 0.35; pointer-events: none; mix-blend-mode: overlay; }
-    .hero-inner {
+    .slide-grain { position: absolute; inset: 0; background-image: var(--grain); opacity: 0.35; pointer-events: none; mix-blend-mode: overlay; z-index: 1; }
+    .slide-inner {
       position: relative;
+      z-index: 2;
       max-width: 1100px;
       margin: 0 auto;
       width: 100%;
@@ -275,37 +490,73 @@
       color: var(--cream);
       text-transform: uppercase;
     }
-    .hero h1 {
+    .slide h1, .slide h2.hero-h {
       font-family: var(--font-display);
-      font-size: clamp(54px, 9vw, 124px);
-      line-height: 0.93;
+      font-size: clamp(50px, 8vw, 112px);
+      line-height: 0.95;
       text-transform: uppercase;
       color: var(--cream);
       text-shadow: 0 4px 22px rgba(0,0,0,0.55);
-      margin-bottom: 22px;
-      max-width: 12ch;
+      margin-bottom: 18px;
+      max-width: 15ch;
     }
-    .hero h1 em {
-      font-style: normal;
-      color: var(--brass-light);
-      font-family: 'Alegreya', serif;
-      font-weight: 700;
-      font-style: italic;
-      text-transform: none;
-      font-size: 0.78em;
-      letter-spacing: -0.01em;
-    }
-    .hero p.sub {
+    .slide p.sub {
       font-family: var(--font-head);
       font-size: clamp(15px, 1.4vw, 18px);
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--cream-deep);
-      max-width: 44ch;
-      margin-bottom: 32px;
+      max-width: 46ch;
+      margin-bottom: 30px;
     }
     .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
-    .hero-scissors { position: absolute; right: 40px; bottom: 40px; width: 84px; opacity: 0.42; color: var(--cream); }
+    .hero-scissors { position: absolute; right: 40px; bottom: 70px; width: 84px; opacity: 0.42; color: var(--cream); z-index: 3; pointer-events: none; }
+
+    .carousel-dots {
+      position: absolute;
+      left: 0; right: 0;
+      bottom: 26px;
+      z-index: 5;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+    }
+    .carousel-dots button {
+      width: 36px; height: 4px;
+      background: rgba(243,234,214,0.35);
+      border: none;
+      border-radius: 2px;
+      padding: 10px 0;
+      position: relative;
+      cursor: pointer;
+    }
+    .carousel-dots button::before {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; top: 50%;
+      height: 4px;
+      transform: translateY(-50%);
+      background: rgba(243,234,214,0.35);
+      transition: background .3s ease;
+    }
+    .carousel-dots button[aria-current="true"]::before { background: var(--cream); }
+
+    .carousel-arrow {
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      z-index: 5;
+      width: 48px; height: 48px;
+      background: rgba(20,18,16,0.35);
+      border: 1.5px solid rgba(243,234,214,0.5);
+      border-radius: 50%;
+      color: var(--cream);
+      display: inline-flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      transition: background .2s ease, border-color .2s ease;
+    }
+    .carousel-arrow:hover { background: rgba(138,26,26,0.6); border-color: var(--cream); }
+    .carousel-arrow.prev { left: 22px; }
+    .carousel-arrow.next { right: 22px; }
 
     /* ---------- Differentiator strip ---------- */
     .diffs {
@@ -354,6 +605,7 @@
 
     /* ---------- Section head ---------- */
     .section { padding: 92px 24px; }
+    .section--cream { background: var(--cream); }
     .section-head {
       text-align: center;
       max-width: 780px;
@@ -431,17 +683,23 @@
       margin-top: 24px;
     }
 
-    /* ---------- Services / menu board ---------- */
+    /* ---------- Services / menu boards ---------- */
     .services { background: var(--ink); color: var(--cream); }
     .services .section-head h2, .services .section-head p { color: var(--cream); }
     .services .eyebrow { color: var(--brass-light); }
 
-    .price-board {
-      max-width: 820px;
+    .price-boards {
+      max-width: 1400px;
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .price-board {
       background: var(--paper);
       color: var(--ink);
-      padding: 54px 56px 48px;
+      padding: 48px 44px 40px;
       position: relative;
       box-shadow: 0 40px 60px -30px rgba(0,0,0,0.6);
       opacity: 0; transform: translateY(18px);
@@ -465,7 +723,7 @@
     .board-title {
       text-align: center;
       font-family: var(--font-display);
-      font-size: clamp(42px, 6vw, 62px);
+      font-size: clamp(38px, 4.4vw, 52px);
       letter-spacing: 0.04em;
       margin-bottom: 4px;
       position: relative;
@@ -473,14 +731,14 @@
     .board-sub {
       text-align: center;
       font-family: var(--font-stamp);
-      font-size: 13px;
+      font-size: 12px;
       letter-spacing: 0.22em;
       color: var(--oxblood);
-      margin-bottom: 32px;
+      margin-bottom: 28px;
       position: relative;
     }
     .price-list { list-style: none; padding: 0; margin: 0; position: relative; }
-    .price-list li { padding: 14px 0; border-bottom: 1px dashed rgba(20,18,16,0.18); }
+    .price-list li { padding: 13px 0; border-bottom: 1px dashed rgba(20,18,16,0.18); }
     .price-list li:last-child { border-bottom: none; }
     .price-row { display: flex; align-items: baseline; gap: 12px; }
     .price-name {
@@ -488,7 +746,7 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      font-size: 17px;
+      font-size: 15.5px;
       white-space: nowrap;
     }
     .price-dots {
@@ -498,21 +756,21 @@
     }
     .price-amt {
       font-family: var(--font-display);
-      font-size: 34px;
+      font-size: 30px;
       color: var(--oxblood);
       letter-spacing: 0.02em;
     }
     .price-desc {
       font-style: italic;
       color: var(--ink-soft);
-      font-size: 15px;
+      font-size: 14.5px;
       margin-top: 2px;
     }
     .price-note {
-      margin-top: 32px;
+      margin-top: 28px;
       border-left: 3px solid var(--oxblood);
       padding: 10px 14px;
-      font-size: 14px;
+      font-size: 13.5px;
       color: var(--ink-soft);
       background: rgba(138,26,26,0.04);
       position: relative;
@@ -557,6 +815,51 @@
       opacity: 0.85;
     }
 
+    /* ---------- FAQ ---------- */
+    .faq { background: var(--cream); }
+    .faq-list {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .faq-item {
+      border-bottom: 1px solid rgba(20,18,16,0.15);
+    }
+    .faq-item:last-of-type { border-bottom: none; }
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 22px 44px 22px 0;
+      font-family: var(--font-head);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 18px;
+      color: var(--ink);
+      position: relative;
+      outline-offset: 4px;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: "+";
+      position: absolute;
+      right: 2px; top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--font-display);
+      font-size: 32px;
+      color: var(--oxblood);
+      line-height: 1;
+      transition: transform .3s ease;
+    }
+    .faq-item[open] summary::after { content: "−"; }
+    .faq-item summary:hover { color: var(--oxblood); }
+    .faq-answer {
+      padding: 0 40px 26px 0;
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--ink-soft);
+    }
+
     /* ---------- Reviews ---------- */
     .reviews { background: var(--ink); color: var(--cream); }
     .reviews .section-head h2 { color: var(--cream); }
@@ -599,33 +902,11 @@
       color: var(--brass-light);
       position: relative;
     }
-    .reviews-cta { text-align: center; margin-top: 46px; }
-
-    /* ---------- First Responders band ---------- */
-    .responders {
-      background: linear-gradient(135deg, var(--oxblood) 0%, var(--oxblood-deep) 100%);
-      color: var(--cream);
-      padding: 72px 24px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .responders::before {
-      content: "";
-      position: absolute; inset: 0;
-      background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0 2px, transparent 2px 12px);
-      pointer-events: none;
-    }
-    .responders-inner { position: relative; max-width: 760px; margin: 0 auto; }
-    .responders .eyebrow { color: var(--brass-light); letter-spacing: 0.32em; }
-    .responders h2 {
-      font-family: var(--font-display);
-      font-size: clamp(38px, 5.5vw, 58px);
-      margin-bottom: 14px;
-    }
-    .responders p { font-size: 18px; font-style: italic; color: var(--cream-deep); margin-bottom: 26px; }
-    .btn-cream { background: var(--cream); color: var(--ink); border-color: var(--cream); }
-    .btn-cream:hover { background: var(--paper); transform: translateY(-1px); }
+    .reviews-cta { text-align: center; margin-top: 48px; }
+    .reviews-cta .cta-eyebrow { font-family: var(--font-stamp); font-size: 12px; letter-spacing: 0.24em; color: var(--brass-light); text-transform: uppercase; display: block; margin-bottom: 8px; }
+    .reviews-cta .cta-lead { color: var(--cream-deep); font-style: italic; font-size: 16.5px; margin: 0 0 22px; }
+    .reviews-cta .cta-row { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+    .reviews-cta .btn svg { width: 18px; height: 18px; vertical-align: -4px; margin-right: 8px; }
 
     /* ---------- Shop ---------- */
     .shop { background: var(--cream); }
@@ -744,14 +1025,205 @@
       margin: 0;
     }
 
+    /* ---------- Gift Cards band ---------- */
+    .giftcards {
+      background: linear-gradient(135deg, var(--oxblood) 0%, var(--oxblood-deep) 100%);
+      color: var(--cream);
+      padding: 52px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .giftcards::before {
+      content: "";
+      position: absolute; inset: 0;
+      background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0 2px, transparent 2px 12px);
+      pointer-events: none;
+    }
+    .giftcards-inner {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 1.4fr auto;
+      align-items: center;
+      gap: 36px;
+    }
+    .giftcards h2 {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 4.2vw, 50px);
+      letter-spacing: 0.04em;
+      margin: 0;
+    }
+    .giftcards .brass-underline {
+      display: inline-block;
+      height: 3px;
+      background: var(--brass-light);
+      width: 64px;
+      margin-top: 10px;
+    }
+    .giftcards .gc-sub {
+      font-size: 17.5px;
+      font-style: italic;
+      color: var(--cream-deep);
+      margin: 0;
+    }
+
+    /* ---------- First Responders band ---------- */
+    .responders {
+      background: linear-gradient(135deg, var(--oxblood) 0%, var(--oxblood-deep) 100%);
+      color: var(--cream);
+      padding: 72px 24px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .responders::before {
+      content: "";
+      position: absolute; inset: 0;
+      background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.04) 0 2px, transparent 2px 12px);
+      pointer-events: none;
+    }
+    .responders-inner { position: relative; max-width: 760px; margin: 0 auto; }
+    .responders .eyebrow { color: var(--brass-light); letter-spacing: 0.32em; }
+    .responders h2 {
+      font-family: var(--font-display);
+      font-size: clamp(38px, 5.5vw, 58px);
+      margin-bottom: 14px;
+    }
+    .responders p { font-size: 18px; font-style: italic; color: var(--cream-deep); margin-bottom: 26px; }
+
+    /* ---------- Your First Visit ---------- */
+    .first-visit { background: var(--cream); }
+    .fv-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 36px 28px;
+    }
+    .fv-card {
+      text-align: center;
+      padding: 22px 16px 18px;
+      transition: transform .25s ease;
+      opacity: 0; transform: translateY(18px);
+    }
+    .fv-card.is-in { opacity: 1; transform: translateY(0); transition: opacity .7s ease, transform .7s ease; }
+    .fv-card:hover { transform: translateY(-2px); }
+    .fv-icon {
+      width: 72px; height: 72px;
+      border: 2px solid var(--brass);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 18px;
+      color: var(--oxblood);
+      background: var(--paper);
+      transition: background .25s ease, color .25s ease;
+    }
+    .fv-card:hover .fv-icon { background: var(--oxblood); color: var(--cream); }
+    .fv-icon svg { width: 34px; height: 34px; }
+    .fv-card h3 {
+      font-family: var(--font-head);
+      text-transform: uppercase;
+      font-size: 16px;
+      letter-spacing: 0.1em;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+    .fv-card p {
+      font-size: 15.5px;
+      font-style: italic;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+
+    /* ---------- Blog ---------- */
+    .blog { background: var(--cream); }
+    .blog-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 34px 28px;
+    }
+    .blog-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--paper);
+      border: 1px solid var(--cream-deep);
+      position: relative;
+      transition: transform .3s ease, box-shadow .3s ease;
+      opacity: 0; transform: translateY(18px);
+    }
+    .blog-card.is-in { opacity: 1; transform: translateY(0); transition: opacity .7s ease, transform .7s ease, box-shadow .3s ease; }
+    .blog-card:hover { transform: translateY(-4px); box-shadow: 0 22px 36px -20px rgba(0,0,0,0.4); }
+    .blog-card-link {
+      position: absolute; inset: 0;
+      z-index: 3;
+      text-indent: -9999px;
+      color: transparent;
+    }
+    .blog-card-link:focus-visible { outline: 2px solid var(--brass-light); outline-offset: 2px; }
+    .blog-thumb {
+      aspect-ratio: 16/10;
+      width: 100%;
+      background: var(--cream-deep);
+      overflow: hidden;
+    }
+    .blog-thumb img {
+      width: 100%; height: 100%; object-fit: cover;
+      filter: saturate(0.95) contrast(1.02);
+    }
+    .blog-body { padding: 22px 22px 24px; display: flex; flex-direction: column; gap: 10px; }
+    .blog-meta { display: flex; align-items: center; gap: 12px; }
+    .blog-date {
+      font-family: var(--font-stamp);
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      color: var(--oxblood);
+    }
+    .blog-eyebrow {
+      font-family: var(--font-head);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 11.5px;
+      color: var(--ink-soft);
+    }
+    .blog-title {
+      font-family: var(--font-head);
+      font-weight: 600;
+      font-size: 19px;
+      line-height: 1.35;
+      color: var(--ink);
+      margin: 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .blog-read-more {
+      margin-top: auto;
+      padding-top: 10px;
+      font-family: var(--font-head);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 12px;
+      color: var(--oxblood);
+      text-decoration: none;
+      align-self: flex-start;
+      position: relative;
+      z-index: 4;
+    }
+    .blog-read-more:hover { color: var(--oxblood-deep); }
+
     /* ---------- Contact ---------- */
     .contact { background: var(--cream); }
     .contact-grid {
-      max-width: 1100px;
+      max-width: 1200px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 60px;
+      gap: 48px;
+      align-items: start;
     }
     .info-stack h3 {
       font-family: var(--font-display);
@@ -770,6 +1242,15 @@
     .hours-table td:first-child { font-family: var(--font-head); text-transform: uppercase; letter-spacing: 0.1em; font-size: 14px; }
     .hours-table td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
     .walkins-note { margin-top: 10px; font-size: 14.5px; font-style: italic; color: var(--ink-soft); }
+
+    .map-embed {
+      background: var(--paper);
+      padding: 8px;
+      border: 3px solid var(--ink);
+      box-shadow: 0 22px 40px -22px rgba(138,26,26,0.5);
+      margin-bottom: 32px;
+    }
+    .map-embed iframe { display: block; width: 100%; height: 340px; border: 0; }
 
     .form { background: var(--paper); padding: 34px 30px; box-shadow: 0 22px 40px -22px rgba(0,0,0,0.35); position: relative; }
     .form::before {
@@ -810,21 +1291,68 @@
     .form textarea { min-height: 120px; resize: vertical; }
     .form input:focus, .form textarea:focus { outline: 2px solid var(--oxblood); outline-offset: 1px; }
     .form button { width: 100%; margin-top: 6px; }
+    .honeypot {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* ---------- Accessibility statement ---------- */
+    .accessibility { background: var(--cream); padding: 64px 24px; }
+    .accessibility-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      border-top: 1px dashed rgba(20,18,16,0.2);
+      padding-top: 40px;
+    }
+    .accessibility h2 {
+      font-family: var(--font-head);
+      font-size: 22px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+    .accessibility p { font-size: 16.5px; color: var(--ink-soft); margin: 0 0 14px; }
+    .accessibility a { color: var(--oxblood); }
+
+    .a11y-icon {
+      position: fixed;
+      left: 20px; bottom: 20px;
+      width: 42px; height: 42px;
+      background: var(--cream);
+      border: 2px solid var(--ink);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center; justify-content: center;
+      text-decoration: none;
+      color: var(--ink);
+      z-index: 45;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+      transition: background .2s ease, transform .2s ease;
+    }
+    .a11y-icon:hover { background: var(--brass-light); transform: translateY(-1px); }
+    .a11y-icon svg { width: 22px; height: 22px; }
 
     /* ---------- Footer ---------- */
     .footer {
       background: var(--ink);
       color: var(--cream);
-      padding: 64px 24px 30px;
       position: relative;
       border-top: 14px solid transparent;
       border-image: var(--stripe) 14 repeat;
     }
+    .footer-info {
+      padding: 64px 24px 30px;
+    }
     .footer-grid {
-      max-width: 1200px;
+      max-width: 1280px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
+      grid-template-columns: 1.3fr 1fr 1fr 1.3fr;
       gap: 48px;
     }
     .footer h4 {
@@ -845,32 +1373,90 @@
     }
     .footer a:hover { color: var(--brass-light); }
     .footer-col ul { list-style: none; padding: 0; margin: 0; }
-    .footer-brand img { height: 64px; filter: brightness(0) invert(1) sepia(0.2) saturate(0.8); }
-    .footer-brand p { font-family: var(--font-stamp); font-size: 13px; letter-spacing: 0.12em; color: var(--cream-deep); margin: 14px 0 18px; line-height: 1.8; text-transform: uppercase; }
-    .socials { display: flex; gap: 10px; }
+    .footer-brand img {
+      height: 110px;
+      width: auto;
+      filter: brightness(0) invert(1) sepia(0.2) saturate(0.8);
+    }
+    .footer-brand p {
+      font-family: var(--font-stamp);
+      font-size: 13px;
+      letter-spacing: 0.12em;
+      color: var(--cream-deep);
+      margin: 18px 0 0;
+      line-height: 1.9;
+      text-transform: uppercase;
+    }
+    .footer-visit-qr {
+      display: inline-block;
+      margin-top: 14px;
+      text-decoration: none;
+    }
+    .footer-visit-qr img {
+      width: 140px;
+      height: auto;
+      background: var(--cream);
+      padding: 6px;
+      border-radius: 2px;
+    }
+    .footer-visit-qr-cap {
+      display: block;
+      margin-top: 8px;
+      font-family: var(--font-stamp);
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      color: var(--cream-deep);
+      text-transform: uppercase;
+    }
+
+    .socials-band {
+      padding: 32px 24px;
+      border-top: 1px solid rgba(243,234,214,0.15);
+      border-bottom: 1px solid rgba(243,234,214,0.15);
+      text-align: center;
+    }
+    .socials-eyebrow {
+      display: block;
+      font-family: var(--font-stamp);
+      font-size: 12px;
+      letter-spacing: 0.26em;
+      color: var(--brass-light);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .socials {
+      display: inline-flex;
+      gap: 20px;
+      align-items: center;
+      justify-content: center;
+    }
     .socials a {
-      width: 40px; height: 40px;
+      width: 56px; height: 56px;
       border: 1.5px solid var(--cream-deep);
       border-radius: 50%;
       display: inline-flex; align-items: center; justify-content: center;
       padding: 0;
+      color: var(--cream-deep);
+      transition: background .2s ease, border-color .2s ease, color .2s ease;
     }
-    .socials a:hover { border-color: var(--brass-light); background: rgba(184,137,43,0.12); }
-    .socials svg { width: 18px; height: 18px; }
+    .socials a:hover { background: var(--oxblood); border-color: var(--oxblood); color: var(--cream); }
+    .socials svg { width: 22px; height: 22px; }
 
     .footer-bottom {
-      max-width: 1200px;
-      margin: 40px auto 0;
-      border-top: 1px solid rgba(243,234,214,0.1);
-      padding-top: 20px;
+      padding: 20px 24px;
+    }
+    .footer-bottom-inner {
+      max-width: 1280px;
+      margin: 0 auto;
       display: flex;
       justify-content: space-between;
       gap: 16px;
       flex-wrap: wrap;
-      font-size: 13px;
+      font-family: var(--font-stamp);
+      font-size: 12px;
       color: var(--cream-deep);
-      font-family: var(--font-head);
-      letter-spacing: 0.1em;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
     }
 
     /* ---------- Mobile sticky CTA ---------- */
@@ -892,7 +1478,101 @@
       box-shadow: 0 -8px 24px rgba(0,0,0,0.35);
     }
 
+    /* ---------- Popup modal ---------- */
+    .popup-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(20,18,16,0.75);
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+      z-index: 80;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+      opacity: 0;
+      transition: opacity .4s ease;
+    }
+    .popup-backdrop.is-open { display: flex; }
+    .popup-backdrop.is-visible { opacity: 1; }
+    .popup-card {
+      position: relative;
+      background: var(--paper);
+      color: var(--ink);
+      max-width: 560px;
+      width: calc(100vw - 32px);
+      max-height: calc(100vh - 48px);
+      overflow-y: auto;
+      border: 3px solid var(--ink);
+      box-shadow: 0 32px 54px -18px rgba(138,26,26,0.55);
+      padding: 30px 28px 28px;
+      transform: scale(0.96);
+      transition: transform .4s ease;
+    }
+    .popup-backdrop.is-visible .popup-card { transform: scale(1); }
+    .popup-close {
+      position: absolute;
+      top: 10px; right: 10px;
+      width: 40px; height: 40px;
+      display: inline-flex; align-items: center; justify-content: center;
+      background: transparent;
+      border: 1.5px solid var(--ink);
+      border-radius: 50%;
+      cursor: pointer;
+      color: var(--ink);
+      font-family: var(--font-head);
+      font-size: 20px;
+      line-height: 1;
+      padding: 0;
+    }
+    .popup-close:hover { background: var(--ink); color: var(--cream); }
+    .popup-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 18px 0 22px;
+      border: 1px solid rgba(20,18,16,0.15);
+    }
+    .popup-img.is-hidden { display: none; }
+    .popup-fallback { display: none; }
+    .popup-fallback.is-shown { display: block; margin: 16px 0 22px; }
+    .popup-fallback h3 {
+      font-family: var(--font-display);
+      font-size: 34px;
+      letter-spacing: 0.04em;
+      margin: 8px 0 10px;
+      color: var(--ink);
+    }
+    .popup-fallback p {
+      font-size: 16.5px;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+    .popup-ctas { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+    .popup-ctas .btn { width: 100%; text-align: center; }
+    .popup-dismiss-link {
+      font-family: var(--font-head);
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-size: 12px;
+      color: var(--ink-soft);
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px 4px;
+      text-decoration: underline;
+    }
+
     /* ---------- Responsive ---------- */
+    @media (max-width: 1100px) {
+      .nav { gap: 14px; }
+      .nav a { font-size: 11.5px; letter-spacing: 0.12em; }
+    }
+
+    @media (max-width: 1024px) {
+      .brand img { height: 76px; }
+    }
+
     @media (max-width: 980px) {
       .nav { display: none; }
       .hamburger { display: inline-flex; margin-left: auto; }
@@ -903,36 +1583,62 @@
       .gallery-grid { grid-template-columns: repeat(3, 1fr); }
       .product-grid { grid-template-columns: repeat(2, 1fr); gap: 36px 28px; }
       .shop-trust { grid-template-columns: 1fr; gap: 18px; }
+      .fv-grid { grid-template-columns: repeat(2, 1fr); }
+      .blog-grid { grid-template-columns: repeat(2, 1fr); }
+      .price-boards { grid-template-columns: 1fr; gap: 36px; max-width: 820px; }
       .price-board { padding: 40px 28px 36px; }
       .price-amt { font-size: 28px; }
-      .hero { min-height: 70vh; padding: 64px 20px 70px; }
-      .hero-scissors { display: none; }
+      .giftcards-inner { grid-template-columns: 1fr; text-align: center; gap: 18px; }
+      .giftcards .brass-underline { margin: 10px auto 0; }
+      .footer-brand img { height: 90px; }
+      .footer-visit-qr img { width: 120px; }
     }
 
     @media (max-width: 720px) {
       .section { padding: 64px 20px; }
+      .brand img { height: 56px; }
+      .brand-est { display: none; }
+      .header-inner { padding: 8px 16px; gap: 12px; }
       .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 18px; }
       .review-grid { grid-template-columns: 1fr; }
       .product-grid { grid-template-columns: 1fr; gap: 32px; }
+      .fv-grid { grid-template-columns: 1fr; gap: 24px; }
+      .blog-grid { grid-template-columns: 1fr; gap: 24px; }
       .mobile-book { display: block; }
       body { padding-bottom: 58px; }
-      .price-name { font-size: 15px; white-space: normal; }
+      .price-name { font-size: 14.5px; white-space: normal; }
       .phone-pill span.phone-label { display: none; }
+      .hero-carousel { min-height: 70vh; }
+      .slide { padding: 60px 20px 90px; }
+      .carousel-arrow { display: none; }
+      .hero-scissors { display: none; }
+      .map-embed iframe { height: 240px; }
+      .footer-visit-qr { display: none; }
+      .socials { gap: 14px; }
+      .socials a { width: 48px; height: 48px; }
+      .socials svg { width: 20px; height: 20px; }
+      .footer-bottom-inner { justify-content: center; text-align: center; flex-direction: column; gap: 8px; }
+      .a11y-icon { bottom: 90px; }
+      .reviews-cta .cta-row { flex-direction: column; align-items: stretch; }
+      .reviews-cta .btn { justify-content: center; }
     }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       .marquee-track { animation: none; padding-left: 0; }
-      .section-head, .price-board, .about-grid, .gallery-item, .review-card, .diff-item, .product-card {
+      .section-head, .price-board, .about-grid, .gallery-item, .review-card, .diff-item,
+      .product-card, .fv-card, .blog-card {
         opacity: 1 !important;
         transform: none !important;
         transition: none !important;
       }
       .gallery-item, .product-card { transform: none !important; }
+      .slide { transition: none !important; }
+      .popup-backdrop, .popup-card { transition: none !important; }
     }
 
     /* Focus states */
-    a:focus-visible, button:focus-visible, .btn:focus-visible, .phone-pill:focus-visible, input:focus-visible, textarea:focus-visible {
+    a:focus-visible, button:focus-visible, .btn:focus-visible, .phone-pill:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible {
       outline: 2px solid var(--brass-light);
       outline-offset: 2px;
     }
@@ -971,17 +1677,19 @@
   <header class="header">
     <div class="header-inner">
       <a class="brand" href="#top" aria-label="All About Men Barbershop, home">
-        <img src="./images/logo.png" alt="All About Men Barbershop logo" loading="eager" width="160" height="52">
+        <img src="./images/logo.png" alt="All About Men Barbershop logo" loading="eager" width="260" height="96">
         <span class="brand-est" aria-hidden="true">Est. 2004</span>
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#reviews">Reviews</a>
         <a href="#shop">Shop</a>
-        <a href="https://aambarbershop.com/blog/" target="_blank" rel="noopener">Blog</a>
-        <a href="#contact">Visit</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#faq">FAQ</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#blog">Blog</a>
+        <a href="#first-visit">Visit</a>
+        <a href="#contact">Contact</a>
       </nav>
       <div class="header-ctas">
         <a class="phone-pill" href="tel:3016829992" aria-label="Call All About Men Barbershop">
@@ -997,27 +1705,78 @@
   </header>
 
   <main id="main">
-    <section class="hero" id="top" aria-label="Intro">
-      <div class="hero-bg" aria-hidden="true"></div>
-      <div class="hero-overlay" aria-hidden="true"></div>
-      <div class="hero-grain" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <span class="hero-badge">Frederick, MD · Est. 2004</span>
-        <h1>Get Your Cut, <em>enjoy a game,</em> Have A Beer.</h1>
-        <p class="sub">A proper men's barbershop. Cold pint on tap, shuffleboard in the back, and a seat with your name on it.</p>
-        <div class="hero-ctas">
-          <a class="btn btn-primary" href="https://na0.meevo.com/OnlineBookingApp/login?tenantId=104105&locationId=107260" target="_blank" rel="noopener">Book An Appointment</a>
-          <a class="btn btn-ghost" href="#services">See The Menu</a>
+    <!-- ===== HERO CAROUSEL ===== -->
+    <section class="hero-carousel" id="top" role="region" aria-roledescription="carousel" aria-label="Featured announcements">
+      <article class="slide is-active" aria-label="Slide 1 of 3, Book an appointment">
+        <div class="slide-bg" style="background-image: url('./images/carousel-1.jpg');" aria-hidden="true"></div>
+        <div class="slide-overlay" aria-hidden="true"></div>
+        <div class="slide-grain" aria-hidden="true"></div>
+        <div class="slide-inner">
+          <span class="hero-badge">Frederick, MD · Est. 2004</span>
+          <h1>Book An Appointment</h1>
+          <p class="sub">Walk-ins welcome · Reservations recommended since 2004</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="https://na0.meevo.com/OnlineBookingApp/login?tenantId=104105&locationId=107260" target="_blank" rel="noopener">Book Online →</a>
+            <a class="btn btn-ghost" href="#services">See The Menu</a>
+          </div>
         </div>
-      </div>
+      </article>
+
+      <article class="slide" aria-label="Slide 2 of 3, Get your cut, enjoy a game, have a beer" aria-hidden="true">
+        <div class="slide-bg" style="background-image: url('./images/carousel-2.jpg');" aria-hidden="true"></div>
+        <div class="slide-overlay" aria-hidden="true"></div>
+        <div class="slide-grain" aria-hidden="true"></div>
+        <div class="slide-inner">
+          <span class="hero-badge">The House Experience</span>
+          <h2 class="hero-h">Get Your Cut, Enjoy A Game, Have A Beer</h2>
+          <p class="sub">Frederick's premier barbershop experience</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="https://na0.meevo.com/OnlineBookingApp/login?tenantId=104105&locationId=107260" target="_blank" rel="noopener">Book An Appointment →</a>
+            <a class="btn btn-ghost" href="#first-visit">Plan Your Visit</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="slide" aria-label="Slide 3 of 3, Angry Barber products" aria-hidden="true">
+        <div class="slide-bg" style="background-image: url('./images/carousel-3.jpg');" aria-hidden="true"></div>
+        <div class="slide-overlay" aria-hidden="true"></div>
+        <div class="slide-grain" aria-hidden="true"></div>
+        <div class="slide-inner">
+          <span class="hero-badge">The Angry Barber Line</span>
+          <h2 class="hero-h">Angry Barber Products</h2>
+          <p class="sub">Handcrafted beard care, blended in-shop</p>
+          <div class="hero-ctas">
+            <!-- TODO: Replace REPLACE_WITH_SQUARE_STORE_URL with Joe's Square Online store URL -->
+            <a class="btn btn-primary" href="REPLACE_WITH_SQUARE_STORE_URL" target="_blank" rel="noopener">Shop Now →</a>
+            <a class="btn btn-ghost" href="#shop">Featured Products</a>
+          </div>
+        </div>
+      </article>
+
       <svg class="hero-scissors" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
         <circle cx="14" cy="46" r="8"/>
         <circle cx="14" cy="18" r="8"/>
         <path d="M20 22 L58 52"/>
         <path d="M20 42 L58 12"/>
       </svg>
+
+      <button class="carousel-arrow prev" type="button" aria-label="Previous slide" data-carousel-prev>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+      </button>
+      <button class="carousel-arrow next" type="button" aria-label="Next slide" data-carousel-next>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+      </button>
+
+      <div class="carousel-dots" role="tablist" aria-label="Slide navigation">
+        <button type="button" role="tab" aria-label="Go to slide 1" aria-current="true" data-carousel-dot="0"></button>
+        <button type="button" role="tab" aria-label="Go to slide 2" data-carousel-dot="1"></button>
+        <button type="button" role="tab" aria-label="Go to slide 3" data-carousel-dot="2"></button>
+      </div>
+
+      <div class="sr-only" aria-live="polite" data-carousel-live>Slide 1 of 3</div>
     </section>
 
+    <!-- ===== DIFFERENTIATOR STRIP ===== -->
     <section class="diffs" aria-label="What makes us different">
       <div class="diffs-grid">
         <div class="diff-item">
@@ -1044,6 +1803,7 @@
       </div>
     </section>
 
+    <!-- ===== ABOUT ===== -->
     <section class="section about" id="about" aria-labelledby="about-h">
       <div class="section-head">
         <div class="eyebrow">— The Owner —</div>
@@ -1063,61 +1823,106 @@
       </div>
     </section>
 
+    <!-- ===== SERVICES — two boards (Haircuts + Shaves & Beard Work) ===== -->
     <section class="section services" id="services" aria-labelledby="services-h">
       <div class="section-head">
-        <div class="eyebrow">— The Menu Board —</div>
+        <div class="eyebrow">— The House Menu · Two Boards, One Craft —</div>
         <h2 id="services-h">Services &amp; Pricing</h2>
         <p>Straightforward pricing. No surprises at the chair.</p>
       </div>
-      <div class="price-board" role="region" aria-label="Service menu">
-        <div class="board-title">All About Men</div>
-        <div class="board-sub">— Est. 2004 · Frederick, Maryland —</div>
-        <ul class="price-list">
-          <li>
-            <div class="price-row"><span class="price-name">Men's Haircut</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$35</span></div>
-            <div class="price-desc">Wash, cut, and style. The standard. Done right.</div>
-          </li>
-          <li>
-            <div class="price-row"><span class="price-name">Haircut &amp; Beard Trim</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$43</span></div>
-            <div class="price-desc">The full tune-up — top and bottom.</div>
-          </li>
-          <li>
-            <div class="price-row"><span class="price-name">Children (10 &amp; Under)</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$30</span></div>
-            <div class="price-desc">Kid-friendly chair, patient barbers. First-haircut photos welcome.</div>
-          </li>
-          <li>
-            <div class="price-row"><span class="price-name">Military / Fire / Police</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$27</span></div>
-            <div class="price-desc">A small thanks. Valid ID, every visit.</div>
-          </li>
-          <li>
-            <div class="price-row"><span class="price-name">Senior Citizens</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$25</span></div>
-            <div class="price-desc">For the men who taught us how.</div>
-          </li>
-          <li>
-            <div class="price-row"><span class="price-name">Buzz Cut</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$25</span></div>
-            <div class="price-desc">Clippers, one guard, out the door.</div>
-          </li>
-          <li>
-            <div class="price-row"><span class="price-name">Flat Top</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$37</span></div>
-            <div class="price-desc">Old-school. Done the right way, by guys who still know how.</div>
-          </li>
-          <li>
-            <div class="price-row"><span class="price-name">Beard Sculpt</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$15</span></div>
-            <div class="price-desc">Shape, line, and finish. Beard oil on the house.</div>
-          </li>
-          <li>
-            <div class="price-row"><span class="price-name">Straight Razor Neck Shave</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$10</span></div>
-            <div class="price-desc">Hot towel. Sharp steel. Clean lines.</div>
-          </li>
-          <li>
-            <div class="price-row"><span class="price-name">Shampoo</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$7</span></div>
-            <div class="price-desc">Add-on. Hot water, good product, worth it.</div>
-          </li>
-        </ul>
-        <p class="price-note">Prices subject to change. Pricing shown here is current to our best effort — ask your barber if you're not sure.</p>
+      <div class="price-boards">
+
+        <div class="price-board" role="region" aria-label="Haircut menu">
+          <div class="board-title">Haircuts</div>
+          <div class="board-sub">— Precision Cuts · Frederick, MD —</div>
+          <ul class="price-list">
+            <li>
+              <div class="price-row"><span class="price-name">Men's Haircut</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$35</span></div>
+              <div class="price-desc">Unleash your style with our precision cuts — it's all in the details.</div>
+            </li>
+            <li>
+              <div class="price-row"><span class="price-name">Haircut &amp; Beard Trim</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$43</span></div>
+              <div class="price-desc">Shape and tame your mane and beard, finished with our natural balms and oils.</div>
+            </li>
+            <li>
+              <div class="price-row"><span class="price-name">Children (10 &amp; Under)</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$30</span></div>
+              <div class="price-desc">Our "Little Gentlemen" service — fun, comfortable, and kid-approved.</div>
+            </li>
+            <li>
+              <div class="price-row"><span class="price-name">Military, Fire &amp; Police</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$27</span></div>
+              <div class="price-desc">A special offer for our heroes — we honor your duty. <em>Active Duty Only.</em></div>
+            </li>
+            <li>
+              <div class="price-row"><span class="price-name">Veteran Cut</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$30</span></div>
+              <div class="price-desc">Honoring those who've served — we salute your courage and commitment.</div>
+            </li>
+            <li>
+              <div class="price-row"><span class="price-name">Senior Citizens</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$25</span></div>
+              <div class="price-desc">For all you silver foxes.</div>
+            </li>
+            <li>
+              <div class="price-row"><span class="price-name">Buzz Cut</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$25</span></div>
+              <div class="price-desc">For the minimalist man — simple, sleek, one length all over.</div>
+            </li>
+            <li>
+              <div class="price-row"><span class="price-name">Flat Top</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$37</span></div>
+              <div class="price-desc">True 1950s military inspiration — short, precise, uniform.</div>
+            </li>
+            <li>
+              <div class="price-row"><span class="price-name">Beard Sculpt</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$15</span></div>
+              <div class="price-desc">Shape and tame with our "Angry Barber Beard Line."</div>
+            </li>
+            <li>
+              <div class="price-row"><span class="price-name">Shampoo</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$7</span></div>
+              <div class="price-desc">A scrub-a-dub-dub in our hair tub.</div>
+            </li>
+          </ul>
+          <p class="price-note">Prices subject to change. Pricing shown here is current to our best effort — ask your barber if you're not sure.</p>
+        </div>
+
+        <div class="price-board" role="region" aria-label="Shaves and beard work menu">
+          <div class="board-title">Shaves &amp; Beard Work</div>
+          <div class="board-sub">— Straight Blade · Hot Towel —</div>
+          <ul class="price-list">
+            <li>
+              <div class="price-row"><span class="price-name">Neck Shave</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$13</span></div>
+              <div class="price-desc">Classic neck shave with shave cream and a straight blade for a clean finish.</div>
+            </li>
+            <li>
+              <div class="price-row"><span class="price-name">Straight Razor Neck Shave</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$10</span></div>
+              <div class="price-desc">Pre-shave cream and the precision of a fresh blade.</div>
+            </li>
+            <li>
+              <div class="price-row"><span class="price-name">Front &amp; Back Neck Shave</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$23</span></div>
+              <div class="price-desc">Comprehensive front and back neck shave with a straight blade for an all-around neat look.</div>
+            </li>
+            <li>
+              <div class="price-row"><span class="price-name">Beard Lineup &amp; Neck Shave</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$28</span></div>
+              <div class="price-desc">Perfect beard and neck contour with shave cream and straight blade treatment.</div>
+            </li>
+            <li>
+              <div class="price-row"><span class="price-name">Beard Trim &amp; Lineup</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$33</span></div>
+              <div class="price-desc">Trimmers, foil shaver, shave cream, straight blade, and soothing aftershave balm for a well-groomed beard.</div>
+            </li>
+            <li>
+              <div class="price-row"><span class="price-name">Smooth Baby-Butt Bald Head Shave</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$50</span></div>
+              <div class="price-desc">A satisfying 30-minute process — trimmers, foil shaver, straight blade, hot towels, foaming lather, and nourishing aftershave balm.</div>
+            </li>
+            <li>
+              <div class="price-row"><span class="price-name">Bald Head Shave &amp; Beard Lineup</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$73</span></div>
+              <div class="price-desc">Define your lines with a straight razor, capped off with our Smooth Operator bald head shave.</div>
+            </li>
+            <li>
+              <div class="price-row"><span class="price-name">Bald Head Shave &amp; Full Face Shave</span><span class="price-dots" aria-hidden="true"></span><span class="price-amt">$83</span></div>
+              <div class="price-desc">The full treatment — face and head shave, hot towels, foaming lather, straight blade, cold towel, and nourishing aftershave balm. A true pampering.</div>
+            </li>
+          </ul>
+        </div>
+
       </div>
     </section>
 
+    <!-- ===== GALLERY ===== -->
     <section class="section gallery" id="gallery" aria-labelledby="gallery-h">
       <div class="section-head">
         <div class="eyebrow">— The Shop —</div>
@@ -1125,21 +1930,60 @@
         <p>The chairs, the team, and a few cuts we're proud of.</p>
       </div>
       <div class="gallery-grid">
-        <figure class="gallery-item"><img src="./images/shop-1.jpg" alt="Barber chairs lined up along the shop floor" loading="lazy"><figcaption>THE FLOOR</figcaption></figure>
-        <figure class="gallery-item"><img src="./images/shop-2.jpg" alt="Interior detail of the barbershop, vintage fixtures" loading="lazy"><figcaption>THE DETAILS</figcaption></figure>
-        <figure class="gallery-item"><img src="./images/shop-3.jpg" alt="Stocked barber station with tools and product" loading="lazy"><figcaption>THE STATION</figcaption></figure>
-        <figure class="gallery-item"><img src="./images/shop-4.jpg" alt="View of the shop from the waiting area" loading="lazy"><figcaption>THE WAIT</figcaption></figure>
-        <figure class="gallery-item"><img src="./images/shop-5.jpg" alt="Mirrors and chairs in warm shop lighting" loading="lazy"><figcaption>THE MIRRORS</figcaption></figure>
-        <figure class="gallery-item"><img src="./images/shop-6.jpg" alt="Another angle of the All About Men shop interior" loading="lazy"><figcaption>THE ROOM</figcaption></figure>
-        <figure class="gallery-item"><img src="./images/front-desk.jpg" alt="The front-desk team at All About Men Barbershop" loading="lazy"><figcaption>THE TEAM</figcaption></figure>
-        <figure class="gallery-item"><img src="./images/work-1.jpg" alt="Finished haircut — clean fade" loading="lazy"><figcaption>CLEAN FADE</figcaption></figure>
-        <figure class="gallery-item"><img src="./images/work-2.jpg" alt="Finished beard sculpt" loading="lazy"><figcaption>BEARD SCULPT</figcaption></figure>
-        <figure class="gallery-item"><img src="./images/work-3.jpg" alt="Client haircut — classic cut" loading="lazy"><figcaption>CLASSIC</figcaption></figure>
-        <figure class="gallery-item"><img src="./images/work-4.jpg" alt="Client haircut — textured top" loading="lazy"><figcaption>TEXTURED TOP</figcaption></figure>
-        <figure class="gallery-item"><img src="./images/work-5.jpg" alt="Client haircut — sharp lines" loading="lazy"><figcaption>SHARP LINES</figcaption></figure>
+        <figure class="gallery-item"><img src="./images/shop-1.jpg" alt="Barber chairs lined up along the shop floor" loading="lazy" width="600" height="750"><figcaption>THE FLOOR</figcaption></figure>
+        <figure class="gallery-item"><img src="./images/shop-2.jpg" alt="Interior detail of the barbershop, vintage fixtures" loading="lazy" width="600" height="750"><figcaption>THE DETAILS</figcaption></figure>
+        <figure class="gallery-item"><img src="./images/shop-3.jpg" alt="Stocked barber station with tools and product" loading="lazy" width="600" height="750"><figcaption>THE STATION</figcaption></figure>
+        <figure class="gallery-item"><img src="./images/shop-4.jpg" alt="View of the shop from the waiting area" loading="lazy" width="600" height="750"><figcaption>THE WAIT</figcaption></figure>
+        <figure class="gallery-item"><img src="./images/shop-5.jpg" alt="Mirrors and chairs in warm shop lighting" loading="lazy" width="600" height="750"><figcaption>THE MIRRORS</figcaption></figure>
+        <figure class="gallery-item"><img src="./images/shop-6.jpg" alt="Another angle of the All About Men shop interior" loading="lazy" width="600" height="750"><figcaption>THE ROOM</figcaption></figure>
+        <figure class="gallery-item"><img src="./images/front-desk.jpg" alt="The front-desk team at All About Men Barbershop" loading="lazy" width="600" height="750"><figcaption>THE TEAM</figcaption></figure>
+        <figure class="gallery-item"><img src="./images/work-1.jpg" alt="Finished haircut — clean fade" loading="lazy" width="600" height="750"><figcaption>CLEAN FADE</figcaption></figure>
+        <figure class="gallery-item"><img src="./images/work-2.jpg" alt="Finished beard sculpt" loading="lazy" width="600" height="750"><figcaption>BEARD SCULPT</figcaption></figure>
+        <figure class="gallery-item"><img src="./images/work-3.jpg" alt="Client haircut — classic cut" loading="lazy" width="600" height="750"><figcaption>CLASSIC</figcaption></figure>
+        <figure class="gallery-item"><img src="./images/work-4.jpg" alt="Client haircut — textured top" loading="lazy" width="600" height="750"><figcaption>TEXTURED TOP</figcaption></figure>
+        <figure class="gallery-item"><img src="./images/work-5.jpg" alt="Client haircut — sharp lines" loading="lazy" width="600" height="750"><figcaption>SHARP LINES</figcaption></figure>
       </div>
     </section>
 
+    <!-- ===== FAQ ===== -->
+    <section class="section faq" id="faq" aria-labelledby="faq-h">
+      <div class="section-head">
+        <div class="eyebrow">— Questions, Answered —</div>
+        <h2 id="faq-h">The Stuff People Ask Us</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>Do I need an appointment, or can I walk in?</summary>
+          <div class="faq-answer">Walk-ins are welcome up until 15 minutes before close. Appointments are recommended — especially on Saturdays — to reduce wait time. Book online through our booking system or call us at (301) 682-9992.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How long does a typical appointment last?</summary>
+          <div class="faq-answer">Most cuts run 15 to 30 minutes. A haircut plus beard trim runs 30 to 45 minutes. Specialty shaves (like our Smooth Operator bald head shave) take about 30 minutes on their own.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What payment methods do you accept?</summary>
+          <div class="faq-answer">Cash, check, and all major credit cards except American Express. We also accept Apple Pay. We do not accept Venmo.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Do you sell gift cards?</summary>
+          <div class="faq-answer">Yes — gift certificates are available in any amount. Call us at (301) 682-9992 to purchase one. They're always in stock, no waiting.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What products do you use and sell?</summary>
+          <div class="faq-answer">We use and retail Suavecito and our in-house Angry Barber line — beard balms, beard oils, and the Angry Barber Beard Line tool we use at the chair.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the beer real? Can I actually get a beer with my cut?</summary>
+          <div class="faq-answer">Yes, beer is complimentary with a haircut — age permitting. We've got a real in-house bar and a shuffleboard table. This is not a gimmick.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the shop kid-friendly?</summary>
+          <div class="faq-answer">Very. We've got a dedicated kids' section with toys and video games, and many of our barbers specialize in cutting for kids who are picky or nervous in the chair.</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===== REVIEWS ===== -->
     <section class="section reviews" id="reviews" aria-labelledby="reviews-h">
       <div class="section-head">
         <div class="eyebrow">— The Regulars —</div>
@@ -1179,19 +2023,22 @@
         </article>
       </div>
       <div class="reviews-cta">
-        <a class="btn btn-ghost" href="https://aambarbershop.com/reviews/" target="_blank" rel="noopener">See All Reviews</a>
+        <span class="cta-eyebrow">Been to the shop?</span>
+        <p class="cta-lead">Reviews keep the doors open. Drop us a star if we earned it.</p>
+        <div class="cta-row">
+          <a class="btn btn-cream" href="https://www.google.com/maps/place/All+About+Men+Barber+Shop/@39.4483368,-77.3833825,17z/data=!4m8!3m7!1s0x89c9daa8ae9d4351:0x1c36e6622807b338!8m2!3d39.4483368!4d-77.3833825!9m1!1b1!16s%2Fg%2F1w0sdvgj?entry=ttu&amp;g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C7.03 2 3 6.03 3 11c0 6.25 9 11 9 11s9-4.75 9-11c0-4.97-4.03-9-9-9zm0 12a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+            Review Us On Google
+          </a>
+          <a class="btn btn-cream" href="https://www.yelp.com/biz/all-about-men-barber-shop-frederick" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11 12.5v-9c0-.8-.7-1.3-1.4-1-1.8.7-3.6 1.8-4.3 3-.4.6-.1 1.4.5 1.7l4.2 2.2c.6.3 1-.1 1-.9zM19 15l-4-1.3c-.7-.2-1.2.5-.8 1.1l2.4 3.6c.4.6 1.2.6 1.6 0 .6-1 1.1-2.1 1.3-3.1.1-.6-.3-1.2-.5-1.3zM11 22.3V17c0-.7-.7-1.1-1.3-.8-1.3.6-2.7 1.6-3.1 2.6-.2.5.1 1.1.5 1.4 1.1.7 2.3 1.2 3.3 1.5.3.1.6-.1.6-.4zM13.5 14.5c-.5-.6-1.5-.2-1.5.6V18c0 .8.9 1.2 1.5.7l3-2.5c.5-.4.5-1.1 0-1.4l-3-.3zM11 10c0-.5-.4-.9-.9-.9L4 8.5c-.6 0-1.1.5-1 1.1.1 1.5.6 3 1.3 4 .3.5 1 .5 1.4 0l5-4c.2-.2.3-.4.3-.6z"/></svg>
+            Review Us On Yelp
+          </a>
+        </div>
       </div>
     </section>
 
-    <section class="responders" aria-labelledby="responders-h">
-      <div class="responders-inner">
-        <div class="eyebrow">★ Our Thanks ★</div>
-        <h2 id="responders-h">First Responders Eat First</h2>
-        <p>Military, fire, and police get a $27 haircut — every visit, no exceptions, no expiration. Just show a valid ID when you sit down. It's the least we can do.</p>
-        <a class="btn btn-cream" href="https://aambarbershop.com/first-responders/" target="_blank" rel="noopener">Learn More</a>
-      </div>
-    </section>
-
+    <!-- ===== SHOP ===== -->
     <section class="section shop" id="shop" aria-labelledby="shop-h">
       <div class="section-head">
         <div class="eyebrow">— In-House Product Line —</div>
@@ -1265,6 +2112,170 @@
       </div>
     </section>
 
+    <!-- ===== GIFT CARDS BAND ===== -->
+    <section class="giftcards" aria-labelledby="gc-h">
+      <div class="giftcards-inner">
+        <div>
+          <h2 id="gc-h">The Gift of a Good Cut</h2>
+          <span class="brass-underline" aria-hidden="true"></span>
+        </div>
+        <p class="gc-sub">Gift certificates available in any amount. In stock, ready today.</p>
+        <a class="btn btn-cream" href="tel:3016829992">Call to Purchase → (301) 682-9992</a>
+      </div>
+    </section>
+
+    <!-- ===== FIRST RESPONDERS ===== -->
+    <section class="responders" aria-labelledby="responders-h">
+      <div class="responders-inner">
+        <div class="eyebrow">★ Our Thanks ★</div>
+        <h2 id="responders-h">First Responders Eat First</h2>
+        <p>Military, fire, and police get a $27 haircut — every visit, no exceptions, no expiration. Just show a valid ID when you sit down. It's the least we can do.</p>
+        <a class="btn btn-cream" href="https://aambarbershop.com/first-responders/" target="_blank" rel="noopener">Learn More</a>
+      </div>
+    </section>
+
+    <!-- ===== YOUR FIRST VISIT ===== -->
+    <section class="section first-visit" id="first-visit" aria-labelledby="fv-h">
+      <div class="section-head">
+        <div class="eyebrow">— New To The Shop? —</div>
+        <h2 id="fv-h">What To Expect On Your First Visit</h2>
+        <p>If you've never been, here's the short version. No surprises. No gimmicks. Just a good cut and an even better hang.</p>
+      </div>
+      <div class="fv-grid">
+        <div class="fv-card">
+          <div class="fv-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 21V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v14"/><path d="M4 21h16"/><circle cx="13" cy="13" r="1" fill="currentColor"/></svg>
+          </div>
+          <h3>Walk In Or Book Ahead</h3>
+          <p>Walk-ins welcome up until 15 minutes before close. For Saturdays and after-work slots, book online — it's the easiest way to skip the wait.</p>
+        </div>
+        <div class="fv-card">
+          <div class="fv-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <h3>Plan For 15–45 Minutes</h3>
+          <p>A standard cut runs about 15–20 minutes. Adding a beard trim pushes to 30–45. Specialty shaves take about 30 on their own.</p>
+        </div>
+        <div class="fv-card">
+          <div class="fv-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/><circle cx="17" cy="15" r="1" fill="currentColor"/></svg>
+          </div>
+          <h3>Payment &amp; Parking</h3>
+          <p>Cash, check, and all major cards except Amex. Apple Pay works too. Free parking in the lot. No Venmo — sorry.</p>
+        </div>
+        <div class="fv-card">
+          <div class="fv-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M6 4h9v14a3 3 0 0 1-3 3H9a3 3 0 0 1-3-3z"/><path d="M15 8h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2h-3"/><path d="M8 4v2M11 4v2"/></svg>
+          </div>
+          <h3>Stick Around A While</h3>
+          <p>Grab a complimentary beer with your cut (age permitting), catch the game on our TVs, or challenge someone to shuffleboard. The kids section has toys and video games if they're tagging along.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BLOG ===== -->
+    <section class="section blog" id="blog" aria-labelledby="blog-h">
+      <div class="section-head">
+        <div class="eyebrow">— The Barber's Corner —</div>
+        <h2 id="blog-h">Grooming Tips, Trends &amp; More</h2>
+        <p>Engaging reads on men's grooming, style trends, and barbershop culture. Straight from the chair.</p>
+      </div>
+      <div class="blog-grid">
+
+        <article class="blog-card">
+          <a class="blog-card-link" href="https://aambarbershop.com/new-year-new-look-5-fresh-haircuts-and-beard-styles-for-2026/" target="_blank" rel="noopener">New Year, New Look</a>
+          <div class="blog-thumb"><img src="./images/blog/blog-1.jpg" alt="Man with a fresh haircut and beard in a blue denim outfit" loading="lazy" width="640" height="400"></div>
+          <div class="blog-body">
+            <div class="blog-meta"><span class="blog-date">12.17.2025</span><span class="blog-eyebrow">Blog</span></div>
+            <h3 class="blog-title">New Year, New Look: Top Men's Haircuts &amp; Beard Styles for 2026</h3>
+            <a class="blog-read-more" href="https://aambarbershop.com/new-year-new-look-5-fresh-haircuts-and-beard-styles-for-2026/" target="_blank" rel="noopener">Read More →</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <a class="blog-card-link" href="https://aambarbershop.com/fall-fresh-how-to-transition-your-haircut-and-beard-for-colder-weather/" target="_blank" rel="noopener">Fall Fresh</a>
+          <div class="blog-thumb"><img src="./images/blog/blog-2.jpg" alt="Close-up portrait of a bearded middle-aged man" loading="lazy" width="640" height="400"></div>
+          <div class="blog-body">
+            <div class="blog-meta"><span class="blog-date">09.30.2025</span><span class="blog-eyebrow">Blog</span></div>
+            <h3 class="blog-title">Fall Fresh: How to Transition Your Haircut and Beard for Colder Weather</h3>
+            <a class="blog-read-more" href="https://aambarbershop.com/fall-fresh-how-to-transition-your-haircut-and-beard-for-colder-weather/" target="_blank" rel="noopener">Read More →</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <a class="blog-card-link" href="https://aambarbershop.com/hot-weather-cool-cuts-summer-grooming-tips-for-the-modern-man/" target="_blank" rel="noopener">Hot Weather, Cool Cuts</a>
+          <div class="blog-thumb"><img src="./images/blog/blog-3.jpg" alt="Cheerful man enjoying a summer day at the beach" loading="lazy" width="640" height="400"></div>
+          <div class="blog-body">
+            <div class="blog-meta"><span class="blog-date">06.30.2025</span><span class="blog-eyebrow">Blog</span></div>
+            <h3 class="blog-title">Hot Weather, Cool Cuts: Summer Grooming Tips for the Modern Man</h3>
+            <a class="blog-read-more" href="https://aambarbershop.com/hot-weather-cool-cuts-summer-grooming-tips-for-the-modern-man/" target="_blank" rel="noopener">Read More →</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <a class="blog-card-link" href="https://aambarbershop.com/spring-into-a-fresh-look-how-a-new-grooming-routine-can-boost-your-confidence-and-style/" target="_blank" rel="noopener">Spring Into A Fresh Look</a>
+          <div class="blog-thumb"><img src="./images/blog/blog-4.jpg" alt="Confident bearded man standing outdoors in casual attire" loading="lazy" width="640" height="400"></div>
+          <div class="blog-body">
+            <div class="blog-meta"><span class="blog-date">03.29.2025</span><span class="blog-eyebrow">Blog</span></div>
+            <h3 class="blog-title">Spring into a Fresh Look: How a New Grooming Routine Can Boost Your Confidence and Style</h3>
+            <a class="blog-read-more" href="https://aambarbershop.com/spring-into-a-fresh-look-how-a-new-grooming-routine-can-boost-your-confidence-and-style/" target="_blank" rel="noopener">Read More →</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <a class="blog-card-link" href="https://aambarbershop.com/say-goodbye-to-flaky-beards-essential-tips-for-a-smooth-and-healthy-beard-this-winter/" target="_blank" rel="noopener">Say Goodbye To Flaky Beards</a>
+          <div class="blog-thumb"><img src="./images/blog/blog-5.jpg" alt="Man grooming and moisturizing his beard in front of a bathroom mirror" loading="lazy" width="640" height="400"></div>
+          <div class="blog-body">
+            <div class="blog-meta"><span class="blog-date">11.27.2024</span><span class="blog-eyebrow">Blog</span></div>
+            <h3 class="blog-title">Say Goodbye to Flaky Beards: Essential Tips for a Smooth and Healthy Beard This Winter</h3>
+            <a class="blog-read-more" href="https://aambarbershop.com/say-goodbye-to-flaky-beards-essential-tips-for-a-smooth-and-healthy-beard-this-winter/" target="_blank" rel="noopener">Read More →</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <a class="blog-card-link" href="https://aambarbershop.com/mastering-the-art-of-the-perfect-shave-tips-from-all-about-men-barbershop/" target="_blank" rel="noopener">Mastering The Art Of The Perfect Shave</a>
+          <div class="blog-thumb"><img src="./images/blog/blog-6.jpg" alt="Traditional shaving accessories arranged on a wooden surface" loading="lazy" width="640" height="400"></div>
+          <div class="blog-body">
+            <div class="blog-meta"><span class="blog-date">09.30.2024</span><span class="blog-eyebrow">Blog</span></div>
+            <h3 class="blog-title">Mastering the Art of the Perfect Shave: Tips from All About Men Barbershop</h3>
+            <a class="blog-read-more" href="https://aambarbershop.com/mastering-the-art-of-the-perfect-shave-tips-from-all-about-men-barbershop/" target="_blank" rel="noopener">Read More →</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <a class="blog-card-link" href="https://aambarbershop.com/the-ultimate-guide-to-beard-care-tips-and-tricks-for-a-well-groomed-look/" target="_blank" rel="noopener">Essential Beard Care Routine</a>
+          <div class="blog-thumb"><img src="./images/blog/blog-7.jpg" alt="Close-up portrait of a man's full red beard" loading="lazy" width="640" height="400"></div>
+          <div class="blog-body">
+            <div class="blog-meta"><span class="blog-date">06.29.2024</span><span class="blog-eyebrow">Blog</span></div>
+            <h3 class="blog-title">Essential Beard Care Routine for Beard Grooming in Frederick, MD</h3>
+            <a class="blog-read-more" href="https://aambarbershop.com/the-ultimate-guide-to-beard-care-tips-and-tricks-for-a-well-groomed-look/" target="_blank" rel="noopener">Read More →</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <a class="blog-card-link" href="https://aambarbershop.com/discovering-timeless-traditions-unveiling-fredericks-all-about-men-barbershop-experience/" target="_blank" rel="noopener">Discovering Timeless Traditions</a>
+          <div class="blog-thumb"><img src="./images/blog/blog-8.jpg" alt="Close-up of a barber's tattooed hands holding comb and scissors" loading="lazy" width="640" height="400"></div>
+          <div class="blog-body">
+            <div class="blog-meta"><span class="blog-date">03.30.2024</span><span class="blog-eyebrow">Blog</span></div>
+            <h3 class="blog-title">Discovering Timeless Traditions: Unveiling Frederick's All About Men Barbershop Experience</h3>
+            <a class="blog-read-more" href="https://aambarbershop.com/discovering-timeless-traditions-unveiling-fredericks-all-about-men-barbershop-experience/" target="_blank" rel="noopener">Read More →</a>
+          </div>
+        </article>
+
+        <article class="blog-card">
+          <a class="blog-card-link" href="https://aambarbershop.com/sample-post-1/" target="_blank" rel="noopener">Celebrate In Style</a>
+          <div class="blog-thumb"><img src="./images/blog/blog-9.jpg" alt="Man in a maroon sweater showing off a fresh haircut and beard trim" loading="lazy" width="640" height="400"></div>
+          <div class="blog-body">
+            <div class="blog-meta"><span class="blog-date">12.11.2023</span><span class="blog-eyebrow">Blog</span></div>
+            <h3 class="blog-title">Celebrate in Style: Embrace Self-Care for a Dazzling Holiday Season</h3>
+            <a class="blog-read-more" href="https://aambarbershop.com/sample-post-1/" target="_blank" rel="noopener">Read More →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
     <section class="section contact" id="contact" aria-labelledby="contact-h">
       <div class="section-head">
         <div class="eyebrow">— Stop In —</div>
@@ -1275,7 +2286,7 @@
         <div class="info-stack">
           <div class="info-block">
             <h3>Address</h3>
-            <p><a href="https://maps.app.goo.gl/ALk6RgWmrNvg9Vys8" target="_blank" rel="noopener">5903 Urbana Pike, Suite 100<br>Frederick, MD 21704</a></p>
+            <p><a href="https://maps.app.goo.gl/ALk6RgWmrNvg9Vys8" target="_blank" rel="noopener">1700 Kingfisher Dr. Suite 8<br>Frederick, MD 21701</a></p>
           </div>
           <div class="info-block">
             <h3>Phone</h3>
@@ -1286,93 +2297,188 @@
             <table class="hours-table">
               <tbody>
                 <tr><td>Mon — Thurs</td><td>9:00a — 7:00p</td></tr>
-                <tr><td>Friday</td><td>9:00a — 6:00p</td></tr>
-                <tr><td>Saturday</td><td>8:00a — 4:00p</td></tr>
-                <tr><td>Sunday</td><td>Closed</td></tr>
+                <tr><td>Friday</td><td>8:00a — 6:00p</td></tr>
+                <tr><td>Saturday</td><td>9:00a — 4:00p</td></tr>
+                <tr><td>Sunday</td><td>10:00a — 3:00p</td></tr>
               </tbody>
             </table>
-            <p class="walkins-note">Walk-ins welcome. Last cut is 30 minutes before close.</p>
+            <p class="walkins-note">Walk-ins welcome. Last cut is 15 minutes before close.</p>
           </div>
         </div>
-        <form class="form" method="post" action="mailto:REPLACE_WITH_JOES_EMAIL@example.com" enctype="text/plain" aria-labelledby="form-h">
-          <!-- TODO: Replace REPLACE_WITH_JOES_EMAIL@example.com with Joe's contact email address -->
-          <h3 id="form-h">Send Us A Note</h3>
-          <p>Questions, group bookings, or just saying hi — drop us a line.</p>
-          <label class="field">
-            <span>Name</span>
-            <input type="text" name="name" required autocomplete="name">
-          </label>
-          <label class="field">
-            <span>Phone</span>
-            <input type="tel" name="phone" autocomplete="tel">
-          </label>
-          <label class="field">
-            <span>Email</span>
-            <input type="email" name="email" required autocomplete="email">
-          </label>
-          <label class="field">
-            <span>Message</span>
-            <textarea name="message" required></textarea>
-          </label>
-          <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
+        <div>
+          <div class="map-embed">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.0!2d-77.3833825!3d39.4483368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c9daa8ae9d4351%3A0x1c36e6622807b338!2sAll%20About%20Men%20Barber%20Shop!5e0!3m2!1sen!2sus!4v1700000000000"
+              width="100%"
+              height="340"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Map showing All About Men Barbershop at 1700 Kingfisher Dr. Suite 8, Frederick, MD"
+            ></iframe>
+          </div>
+          <!-- Form action email is split via data-u/data-d by runtime JS. See script below. -->
+          <form class="form" method="post" data-u="REPLACE_WITH_JOES_EMAIL_LOCALPART" data-d="example.com" aria-labelledby="form-h" id="contact-form">
+            <h3 id="form-h">Send Us A Note</h3>
+            <p>Questions, group bookings, or just saying hi — drop us a line.</p>
+            <label class="field">
+              <span>Name</span>
+              <input type="text" name="name" required autocomplete="name">
+            </label>
+            <label class="field">
+              <span>Phone</span>
+              <input type="tel" name="phone" autocomplete="tel">
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input type="email" name="email" required autocomplete="email">
+            </label>
+            <label class="field">
+              <span>Message</span>
+              <textarea name="message" required></textarea>
+            </label>
+            <!-- Honeypot — bots fill this; humans can't see it. Reject submissions where website !== "" server-side. -->
+            <div class="honeypot" aria-hidden="true">
+              <label for="f-website">Website (leave blank)</label>
+              <input type="text" id="f-website" name="website" tabindex="-1" autocomplete="off">
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ACCESSIBILITY STATEMENT ===== -->
+    <section class="accessibility" id="accessibility" aria-labelledby="a11y-h">
+      <div class="accessibility-inner">
+        <h2 id="a11y-h">Accessibility</h2>
+        <p>All About Men Barbershop is committed to ensuring our website and physical shop are accessible to every guest. This website aims to follow WCAG 2.2 Level AA guidelines — keyboard navigation, descriptive image text, and strong color contrast. We continuously work to improve.</p>
+        <p>If you encounter a barrier using this site, or have accessibility needs for your in-shop visit (wheelchair access, sensory accommodations, communication preferences), please call us at <a href="tel:3016829992">(301) 682-9992</a> or send a note to our team via the <a href="#contact">contact form</a> and we'll help directly.</p>
       </div>
     </section>
   </main>
 
+  <!-- ===== FOOTER — three bands ===== -->
   <footer class="footer">
-    <div class="footer-grid">
-      <div class="footer-col footer-brand">
-        <img src="./images/logo.png" alt="All About Men Barbershop logo" loading="lazy" width="200" height="64">
-        <p>Clean Cuts.<br>Burly Beards.<br>Smooth Shaves.</p>
-        <div class="socials">
-          <a href="https://www.instagram.com/explore/locations/758358861/all-about-men-barbershop/" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
-          </a>
-          <a href="https://www.tiktok.com/@aambarbershop" target="_blank" rel="noopener" aria-label="TikTok">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 3h-3v12.2a3 3 0 1 1-2.3-2.9V9a6 6 0 1 0 5.3 6V9.2a6.5 6.5 0 0 0 3.5 1v-3a3.5 3.5 0 0 1-3.5-3.2z"/></svg>
+    <!-- Band 1 · Info grid -->
+    <div class="footer-info">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <img src="./images/logo.png" alt="All About Men Barbershop logo" loading="lazy" width="260" height="110">
+          <p>Clean Cuts.<br>Burly Beards.<br>Smooth Shaves.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#first-visit">Visit</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#accessibility">Accessibility</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Off-Site</h4>
+          <ul>
+            <li><a href="https://aambarbershop.com/first-responders/" target="_blank" rel="noopener">First Responders</a></li>
+            <li><a href="https://na0.meevo.com/OnlineBookingApp/login?tenantId=104105&locationId=107260" target="_blank" rel="noopener">Book An Appointment</a></li>
+            <li><a href="https://www.google.com/maps/place/All+About+Men+Barber+Shop/@39.4483368,-77.3833825,17z/data=!4m8!3m7!1s0x89c9daa8ae9d4351:0x1c36e6622807b338!8m2!3d39.4483368!4d-77.3833825!9m1!1b1!16s%2Fg%2F1w0sdvgj?entry=ttu&amp;g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Google Reviews</a></li>
+            <li><a href="https://www.yelp.com/biz/all-about-men-barber-shop-frederick" target="_blank" rel="noopener">Yelp</a></li>
+            <!-- TODO: Replace REPLACE_WITH_SQUARE_STORE_URL with Joe's Square Online store URL for the Angry Barber product line -->
+            <li><a href="REPLACE_WITH_SQUARE_STORE_URL" target="_blank" rel="noopener">Shop · Angry Barber</a></li>
+          </ul>
+        </div>
+        <div class="footer-col footer-visit">
+          <h4>Visit &amp; Book</h4>
+          <ul>
+            <li><a href="https://maps.app.goo.gl/ALk6RgWmrNvg9Vys8" target="_blank" rel="noopener">1700 Kingfisher Dr. Suite 8<br>Frederick, MD 21701</a></li>
+            <li><a href="tel:3016829992">(301) 682-9992</a></li>
+            <li style="font-family: var(--font-stamp); font-size: 12px; letter-spacing: 0.1em; color: var(--cream-deep); text-transform: uppercase; padding-top: 10px;">
+              Mon–Thurs 9a–7p · Fri 8a–6p<br>Sat 9a–4p · Sun 10a–3p
+            </li>
+          </ul>
+          <a class="footer-visit-qr" href="https://na0.meevo.com/OnlineBookingApp/login?tenantId=104105&locationId=107260" target="_blank" rel="noopener">
+            <img src="./images/meevo-qr.png" alt="QR code — scan to book an appointment online" loading="lazy" width="140" height="140">
+            <span class="footer-visit-qr-cap">Scan · Book Instantly</span>
           </a>
         </div>
       </div>
-      <div class="footer-col">
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <li><a href="#contact">Visit</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Off-Site</h4>
-        <ul>
-          <li><a href="https://aambarbershop.com/blog/" target="_blank" rel="noopener">Blog</a></li>
-          <!-- TODO: Replace REPLACE_WITH_SQUARE_STORE_URL with Joe's Square Online store URL for the Angry Barber product line -->
-          <li><a href="REPLACE_WITH_SQUARE_STORE_URL" target="_blank" rel="noopener">Shop · Angry Barber</a></li>
-          <li><a href="https://aambarbershop.com/first-responders/" target="_blank" rel="noopener">First Responders</a></li>
-          <li><a href="https://na0.meevo.com/OnlineBookingApp/login?tenantId=104105&locationId=107260" target="_blank" rel="noopener">Book An Appointment</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Visit</h4>
-        <ul>
-          <li><a href="https://maps.app.goo.gl/ALk6RgWmrNvg9Vys8" target="_blank" rel="noopener">5903 Urbana Pike, Ste 100<br>Frederick, MD 21704</a></li>
-          <li><a href="tel:3016829992">(301) 682-9992</a></li>
-        </ul>
+    </div>
+
+    <!-- Band 2 · Socials -->
+    <div class="socials-band">
+      <span class="socials-eyebrow">Follow The Shop</span>
+      <div class="socials" role="list">
+        <a href="https://www.facebook.com/aambarbershop/" target="_blank" rel="noopener" aria-label="Facebook" role="listitem">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8h2.7l.4-3.1h-3.1V9c0-.9.3-1.6 1.6-1.6h1.7v-2.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.2H7.5V14h2.7v8z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/explore/locations/758358861/all-about-men-barbershop/" target="_blank" rel="noopener" aria-label="Instagram" role="listitem">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@aambarbershop" target="_blank" rel="noopener" aria-label="TikTok" role="listitem">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 3h-3v12.2a3 3 0 1 1-2.3-2.9V9a6 6 0 1 0 5.3 6V9.2a6.5 6.5 0 0 0 3.5 1v-3a3.5 3.5 0 0 1-3.5-3.2z"/></svg>
+        </a>
+        <a href="https://www.youtube.com/channel/UCGd1t5qhKPvzYAwaJaH6pHg" target="_blank" rel="noopener" aria-label="YouTube" role="listitem">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.6 7.2c-.2-.9-.9-1.6-1.8-1.8C18.1 5 12 5 12 5s-6.1 0-7.8.4c-.9.2-1.6.9-1.8 1.8C2 8.9 2 12 2 12s0 3.1.4 4.8c.2.9.9 1.6 1.8 1.8 1.7.4 7.8.4 7.8.4s6.1 0 7.8-.4c.9-.2 1.6-.9 1.8-1.8.4-1.7.4-4.8.4-4.8s0-3.1-.4-4.8zM10 15.5v-7l6 3.5-6 3.5z"/></svg>
+        </a>
+        <a href="https://www.pinterest.com/allaboutmenbarbershop/" target="_blank" rel="noopener" aria-label="Pinterest" role="listitem">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.5 2 2 6.5 2 12c0 4.2 2.6 7.8 6.3 9.2-.1-.8-.2-2 0-2.9.2-.8 1.2-5.1 1.2-5.1s-.3-.6-.3-1.5c0-1.4.8-2.5 1.8-2.5.9 0 1.3.7 1.3 1.4 0 .9-.6 2.2-.8 3.4-.2 1 .5 1.9 1.5 1.9 1.8 0 3.2-1.9 3.2-4.7 0-2.4-1.8-4.2-4.3-4.2-2.9 0-4.6 2.2-4.6 4.4 0 .9.3 1.8.8 2.3.1.1.1.2.1.3l-.3 1.2c0 .2-.2.2-.4.2-1.2-.6-2-2.4-2-3.9 0-3.2 2.3-6.1 6.7-6.1 3.5 0 6.2 2.5 6.2 5.8 0 3.5-2.2 6.3-5.2 6.3-1 0-2-.5-2.3-1.1 0 0-.5 1.9-.6 2.4-.2.9-.8 2-1.2 2.7 1 .3 2 .5 3 .5 5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        </a>
       </div>
     </div>
+
+    <!-- Band 3 · Copyright -->
     <div class="footer-bottom">
-      <span>© 2026 All About Men Barbershop</span>
-      <span>Clean Cuts · Burly Beards · Smooth Shaves</span>
+      <div class="footer-bottom-inner">
+        <span>© 2026 All About Men Barbershop · Frederick, MD</span>
+        <span>Clean Cuts · Burly Beards · Smooth Shaves</span>
+      </div>
     </div>
   </footer>
 
+  <!-- ===== FIXED MOBILE BOOK CTA ===== -->
   <a class="mobile-book" href="https://na0.meevo.com/OnlineBookingApp/login?tenantId=104105&locationId=107260" target="_blank" rel="noopener">Book An Appointment →</a>
+
+  <!-- ===== FIXED ACCESSIBILITY ICON (not a third-party overlay) ===== -->
+  <a class="a11y-icon" href="#accessibility" aria-label="Accessibility statement">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+      <circle cx="12" cy="5" r="2" fill="currentColor" stroke="none"/>
+      <path d="M5 9h14"/>
+      <path d="M12 9v5"/>
+      <path d="M9 22l3-8 3 8"/>
+    </svg>
+  </a>
+
+  <!-- ===== FIRST-VISIT IMAGE POPUP ===== -->
+  <div class="popup-backdrop" id="popup-backdrop" role="dialog" aria-modal="true" aria-labelledby="popup-title" aria-describedby="popup-body" hidden>
+    <div class="popup-card" role="document">
+      <button class="popup-close" type="button" aria-label="Close" data-popup-close>×</button>
+      <img class="popup-img" src="./images/popup.jpg" alt="Important update from All About Men Barbershop" id="popup-img">
+      <div class="popup-fallback" id="popup-fallback" role="group" aria-labelledby="popup-title">
+        <div class="eyebrow" style="text-align: center; margin-bottom: 4px;">A Note From The Shop</div>
+        <h3 id="popup-title" style="text-align: center;">Welcome to All About Men</h3>
+        <p id="popup-body" style="text-align: center;">Walk-ins welcome · Reservations recommended — tap below to book your next appointment.</p>
+      </div>
+      <div class="popup-ctas">
+        <a class="btn btn-primary" href="https://na0.meevo.com/OnlineBookingApp/login?tenantId=104105&locationId=107260" target="_blank" rel="noopener">Book An Appointment</a>
+        <button type="button" class="popup-dismiss-link" data-popup-close>Dismiss</button>
+      </div>
+    </div>
+  </div>
 
   <script>
     (function () {
-      // Hamburger — toggles aria-expanded only. Mobile panel is a future task.
+      'use strict';
+
+      var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* ---------- Hamburger (aria toggle only; panel deferred) ---------- */
       var hb = document.getElementById('hamburger-btn');
       if (hb) {
         hb.addEventListener('click', function () {
@@ -1381,7 +2487,8 @@
         });
       }
 
-      // IntersectionObserver reveals
+      /* ---------- IntersectionObserver reveals ---------- */
+      var revealSelector = '.section-head, .price-board, .about-grid, .gallery-item, .review-card, .diff-item, .product-card, .fv-card, .blog-card';
       if ('IntersectionObserver' in window) {
         var io = new IntersectionObserver(function (entries) {
           entries.forEach(function (e) {
@@ -1391,9 +2498,202 @@
             }
           });
         }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-        document.querySelectorAll('.section-head, .price-board, .about-grid, .gallery-item, .review-card, .diff-item, .product-card').forEach(function (el) { io.observe(el); });
+        document.querySelectorAll(revealSelector).forEach(function (el) { io.observe(el); });
       } else {
-        document.querySelectorAll('.section-head, .price-board, .about-grid, .gallery-item, .review-card, .diff-item, .product-card').forEach(function (el) { el.classList.add('is-in'); });
+        document.querySelectorAll(revealSelector).forEach(function (el) { el.classList.add('is-in'); });
+      }
+
+      /* ---------- Hero carousel ---------- */
+      var carousel = document.querySelector('.hero-carousel');
+      if (carousel) {
+        var slides = carousel.querySelectorAll('.slide');
+        var dots = carousel.querySelectorAll('[data-carousel-dot]');
+        var live = carousel.querySelector('[data-carousel-live]');
+        var prev = carousel.querySelector('[data-carousel-prev]');
+        var next = carousel.querySelector('[data-carousel-next]');
+        var total = slides.length;
+        var current = 0;
+        var timer = null;
+        var paused = false;
+
+        function show(i) {
+          current = (i + total) % total;
+          slides.forEach(function (s, idx) {
+            var on = idx === current;
+            s.classList.toggle('is-active', on);
+            if (on) { s.removeAttribute('aria-hidden'); } else { s.setAttribute('aria-hidden', 'true'); }
+          });
+          dots.forEach(function (d, idx) {
+            if (idx === current) { d.setAttribute('aria-current', 'true'); } else { d.removeAttribute('aria-current'); }
+          });
+          if (live) { live.textContent = 'Slide ' + (current + 1) + ' of ' + total; }
+        }
+
+        function tick() { show(current + 1); }
+        function start() {
+          if (reduceMotion || paused) return;
+          stop();
+          timer = setInterval(tick, 6000);
+        }
+        function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+        dots.forEach(function (d) {
+          d.addEventListener('click', function () {
+            var i = parseInt(d.getAttribute('data-carousel-dot'), 10);
+            show(i); start();
+          });
+        });
+        if (prev) prev.addEventListener('click', function () { show(current - 1); start(); });
+        if (next) next.addEventListener('click', function () { show(current + 1); start(); });
+
+        carousel.addEventListener('mouseenter', function () { paused = true; stop(); });
+        carousel.addEventListener('mouseleave', function () { paused = false; start(); });
+
+        document.addEventListener('visibilitychange', function () {
+          if (document.visibilityState !== 'visible') { stop(); } else { start(); }
+        });
+
+        // Keyboard: arrows navigate, space toggles
+        carousel.addEventListener('keydown', function (e) {
+          if (e.key === 'ArrowLeft') { e.preventDefault(); show(current - 1); start(); }
+          else if (e.key === 'ArrowRight') { e.preventDefault(); show(current + 1); start(); }
+          else if (e.key === ' ' && e.target && e.target.tagName !== 'A' && e.target.tagName !== 'BUTTON') {
+            e.preventDefault();
+            if (timer) { stop(); paused = true; } else { paused = false; start(); }
+          }
+        });
+
+        // Touch/swipe
+        var startX = 0, startY = 0, tracking = false;
+        carousel.addEventListener('pointerdown', function (e) {
+          if (e.pointerType !== 'touch') return;
+          tracking = true; startX = e.clientX; startY = e.clientY;
+        });
+        carousel.addEventListener('pointerup', function (e) {
+          if (!tracking) return;
+          tracking = false;
+          var dx = e.clientX - startX;
+          var dy = e.clientY - startY;
+          if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+            if (dx < 0) show(current + 1); else show(current - 1);
+            start();
+          }
+        });
+        carousel.addEventListener('pointercancel', function () { tracking = false; });
+
+        if (reduceMotion) {
+          // Force static first slide
+          show(0);
+        } else {
+          show(0);
+          start();
+        }
+      }
+
+      /* ---------- Email obfuscation (data-u + data-d) ---------- */
+      // Visible email links with .email-link class — not currently used on the page
+      // but pattern is documented for when a real email replaces the placeholder.
+      document.querySelectorAll('.email-link').forEach(function (el) {
+        var u = el.getAttribute('data-u');
+        var d = el.getAttribute('data-d');
+        if (!u || !d) return;
+        var addr = u + '@' + d;
+        el.setAttribute('href', 'mailto:' + addr);
+        if (!el.textContent.trim() || el.querySelector('.email-fallback')) {
+          el.textContent = addr;
+        }
+      });
+
+      // Contact form: assemble action from data-u/data-d at runtime (no raw address in source)
+      var form = document.getElementById('contact-form');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          // Honeypot check (client-side courtesy; server must enforce too)
+          var hp = form.querySelector('#f-website');
+          if (hp && hp.value) { e.preventDefault(); return; }
+          var u = form.getAttribute('data-u');
+          var d = form.getAttribute('data-d');
+          if (u && d) {
+            form.setAttribute('action', 'mailto:' + u + '@' + d);
+            form.setAttribute('enctype', 'text/plain');
+          }
+        });
+      }
+
+      /* ---------- First-visit popup ---------- */
+      var POPUP_KEY = 'aam-popup-dismissed-v1';
+      var backdrop = document.getElementById('popup-backdrop');
+      var popupImg = document.getElementById('popup-img');
+      var popupFallback = document.getElementById('popup-fallback');
+      var lastFocus = null;
+
+      function showFallback() {
+        if (popupImg) popupImg.classList.add('is-hidden');
+        if (popupFallback) popupFallback.classList.add('is-shown');
+      }
+
+      if (popupImg) {
+        popupImg.addEventListener('error', showFallback);
+        // If naturalWidth resolves to 0, the image failed without firing `error` (rare edge).
+        popupImg.addEventListener('load', function () {
+          if (popupImg.naturalWidth === 0) showFallback();
+        });
+      }
+
+      function trapFocus(e) {
+        if (!backdrop.classList.contains('is-open')) return;
+        if (e.key !== 'Tab') return;
+        var focusables = backdrop.querySelectorAll('a[href], button, input, textarea, [tabindex]:not([tabindex="-1"])');
+        if (!focusables.length) return;
+        var first = focusables[0];
+        var last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+
+      function openPopup() {
+        if (!backdrop) return;
+        lastFocus = document.activeElement;
+        backdrop.hidden = false;
+        backdrop.classList.add('is-open');
+        requestAnimationFrame(function () { backdrop.classList.add('is-visible'); });
+        var closeBtn = backdrop.querySelector('.popup-close');
+        if (closeBtn) closeBtn.focus();
+        document.addEventListener('keydown', onKey);
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closePopup() {
+        if (!backdrop) return;
+        try { localStorage.setItem(POPUP_KEY, '1'); } catch (_) {}
+        backdrop.classList.remove('is-visible');
+        setTimeout(function () {
+          backdrop.classList.remove('is-open');
+          backdrop.hidden = true;
+          document.body.style.overflow = '';
+          if (lastFocus && typeof lastFocus.focus === 'function') { lastFocus.focus(); }
+        }, reduceMotion ? 0 : 400);
+        document.removeEventListener('keydown', onKey);
+      }
+
+      function onKey(e) {
+        if (e.key === 'Escape') { closePopup(); }
+        else { trapFocus(e); }
+      }
+
+      if (backdrop) {
+        backdrop.addEventListener('click', function (e) {
+          if (e.target === backdrop) closePopup();
+        });
+        backdrop.querySelectorAll('[data-popup-close]').forEach(function (b) {
+          b.addEventListener('click', closePopup);
+        });
+
+        var dismissed = false;
+        try { dismissed = localStorage.getItem(POPUP_KEY) === '1'; } catch (_) {}
+        if (!dismissed) {
+          setTimeout(openPopup, reduceMotion ? 0 : 600);
+        }
       }
     })();
   </script>

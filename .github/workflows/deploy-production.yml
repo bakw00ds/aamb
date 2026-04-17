@@ -57,6 +57,9 @@ jobs:
       - name: Lint HTML
         run: html5validator --root . --match "index.html" --log INFO
 
+      - name: Update sitemap lastmod
+        run: sed -i "s/YYYY-MM-DD/$(date +%Y-%m-%d)/g" sitemap.xml
+
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -71,7 +74,8 @@ jobs:
             --exclude ".*/*" \
             --exclude ".github/*" \
             --exclude "scripts/*" \
-            --exclude "*.md"
+            --exclude "*.md" \
+            --include ".well-known/*"
 
       - name: Set cache headers — index.html (short, revalidate)
         run: |

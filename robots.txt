@@ -1,0 +1,27 @@
+# All About Men Barbershop — https://aambarbershop.com/
+# Allow legitimate search engines and AI training bots that respect robots.txt
+# Block known content-scrapers and aggressive crawlers
+
+User-agent: *
+Allow: /
+Disallow: /images/popup.jpg
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+Sitemap: https://aambarbershop.com/sitemap.xml
