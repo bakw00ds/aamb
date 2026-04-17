@@ -89,14 +89,15 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; letter-spacing
   100% { transform: translateX(-100%); }
 }
 
-/* ---------- Header ---------- */
+/* ---------- Header (dark "shop sign" band; flows out of the ink marquee above) ---------- */
 .header {
   position: sticky;
   top: 0;
   z-index: 40;
-  background: var(--cream);
-  border-bottom: 1px solid rgba(20,18,16,0.1);
-  box-shadow: 0 2px 0 rgba(0,0,0,0.02), 0 10px 20px -14px rgba(0,0,0,0.25);
+  background: var(--ink);
+  color: var(--cream);
+  border-bottom: 1px solid rgba(184,137,43,0.22); /* thin brass hairline defines bottom edge on any bg below */
+  box-shadow: 0 10px 24px -14px rgba(0,0,0,0.55);
 }
 .header-inner {
   max-width: 1280px;
@@ -110,14 +111,12 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; letter-spacing
 .brand img {
   height: 96px;
   width: auto;
-  /* Logo.png is white-on-transparent (designed for dark bg). Invert + slight
-     darken so it reads as deep ink on the cream header. */
-  filter: invert(1) brightness(0.9);
+  /* logo.png is white-on-transparent — renders natively on the ink header. No filter. */
 }
 .brand-est {
   display: inline-block;
-  border: 1.5px solid var(--oxblood);
-  color: var(--oxblood);
+  border: 1.5px solid var(--brass-light);
+  color: var(--brass-light);
   padding: 2px 8px;
   font-family: var(--font-stamp);
   font-size: 11px;
@@ -131,10 +130,10 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; letter-spacing
   text-transform: uppercase;
   font-size: 12.5px;
   letter-spacing: 0.14em;
-  color: var(--ink);
+  color: var(--cream);
   text-decoration: none;
 }
-.nav a:hover { color: var(--oxblood); }
+.nav a:hover { color: var(--brass-light); }
 
 .header-ctas { display: flex; gap: 10px; align-items: center; }
 .phone-pill {
@@ -142,16 +141,16 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; letter-spacing
   align-items: center;
   gap: 8px;
   padding: 8px 14px;
-  border: 1.5px solid var(--ink);
+  border: 1.5px solid var(--cream);
   border-radius: 999px;
   font-family: var(--font-head);
   font-weight: 600;
   font-size: 14px;
-  color: var(--ink);
+  color: var(--cream);
   text-decoration: none;
   letter-spacing: 0.06em;
 }
-.phone-pill:hover { background: var(--ink); color: var(--cream); }
+.phone-pill:hover { background: var(--cream); color: var(--ink); }
 
 .btn {
   display: inline-block;
@@ -182,14 +181,14 @@ h1, h2, h3, h4 { font-family: var(--font-head); font-weight: 700; letter-spacing
 .hamburger {
   display: none;
   width: 42px; height: 42px;
-  background: transparent; border: 1.5px solid var(--ink);
+  background: transparent; border: 1.5px solid var(--cream);
   border-radius: 2px;
   padding: 0;
   cursor: pointer;
   align-items: center; justify-content: center;
 }
-.hamburger span { display: block; width: 20px; height: 2px; background: var(--ink); position: relative; }
-.hamburger span::before, .hamburger span::after { content: ""; position: absolute; left: 0; width: 20px; height: 2px; background: var(--ink); }
+.hamburger span { display: block; width: 20px; height: 2px; background: var(--cream); position: relative; }
+.hamburger span::before, .hamburger span::after { content: ""; position: absolute; left: 0; width: 20px; height: 2px; background: var(--cream); }
 .hamburger span::before { top: -6px; }
 .hamburger span::after { top: 6px; }
 
