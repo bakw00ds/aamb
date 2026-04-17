@@ -1,0 +1,86 @@
+name: Deploy — Staging
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-staging
+  cancel-in-progress: true
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  deploy:
+    name: Build, lint, and deploy to staging.aambarbershop.com
+    runs-on: ubuntu-latest
+    environment:
+      name: staging
+      url: https://staging.aambarbershop.com
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python (for html5validator)
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install html5validator
+        run: pip install --quiet html5validator
+
+      - name: Lint HTML
+        run: html5validator --root . --match "index.html" --log INFO
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE_ARN_STAGING }}
+          aws-region: us-east-1
+
+      - name: Sync site to S3
+        run: |
+          aws s3 sync . "s3://${{ secrets.S3_BUCKET_STAGING }}/" \
+            --delete \
+            --exclude ".*" \
+            --exclude ".*/*" \
+            --exclude ".github/*" \
+            --exclude "scripts/*" \
+            --exclude "*.md"
+
+      - name: Set cache headers — index.html (short, revalidate)
+        run: |
+          aws s3 cp \
+            "s3://${{ secrets.S3_BUCKET_STAGING }}/index.html" \
+            "s3://${{ secrets.S3_BUCKET_STAGING }}/index.html" \
+            --metadata-directive REPLACE \
+            --cache-control "public, max-age=300, must-revalidate" \
+            --content-type "text/html; charset=utf-8"
+
+      - name: Set cache headers — images (long, immutable)
+        run: |
+          aws s3 cp \
+            "s3://${{ secrets.S3_BUCKET_STAGING }}/images/" \
+            "s3://${{ secrets.S3_BUCKET_STAGING }}/images/" \
+            --recursive \
+            --metadata-directive REPLACE \
+            --cache-control "public, max-age=31536000, immutable"
+
+      - name: Invalidate CloudFront
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${{ secrets.CLOUDFRONT_DIST_STAGING }}" \
+            --paths "/*"
+
+      - name: Summary
+        run: |
+          {
+            echo "### Staging deploy complete"
+            echo ""
+            echo "- URL: https://staging.aambarbershop.com"
+            echo "- Commit: \`${{ github.sha }}\`"
+          } >> "$GITHUB_STEP_SUMMARY"
