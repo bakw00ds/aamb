@@ -291,12 +291,13 @@ Static sites don't get hacked via SQL injection — they get abused via header-l
 ### CSP — copy-pasteable string
 
 ```
-default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://aambarbershop.com; connect-src 'self'; frame-src 'self' https://www.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests
+default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://aambarbershop.com; connect-src 'self'; frame-src 'self' https://www.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self' mailto:; upgrade-insecure-requests
 ```
 
 **Notes on the directives:**
 
-- `'unsafe-inline'` on `script-src` and `style-src` is **load-bearing** because `index.html` uses inline `<style>` and `<script>`. To drop it, extract inline JS/CSS into `/app.js` + `/app.css` with SRI hashes — deferred tech-debt, not blocking launch.
+- **No `'unsafe-inline'` needed.** All JS and CSS live in `/app.js` and `/app.css` — same-origin external files, covered by `'self'`. Inline `style=""` attributes have been migrated to utility classes. Only `<script type="application/ld+json">` blocks remain inline, and those are non-executable data which CSP `script-src` doesn't gate.
+- **Optional: SRI hashes** — for defense-in-depth against origin tampering, add `integrity="sha384-..."` and `crossorigin="anonymous"` to the `<link>` and `<script src>` tags. Compute hashes with `openssl dgst -sha384 -binary app.css | openssl base64 -A`. This is belt-and-suspenders for a same-origin static site; fine to skip.
 - `img-src https://aambarbershop.com` allows the absolute OG image URL used in `<meta property="og:image">`. If OG is moved to a relative path, you can remove this allowance.
 - `frame-src 'self' https://www.google.com` permits the embedded Google Map iframe on the Contact section.
 - `frame-ancestors 'none'` prevents others from embedding us (complementary to `frame-src`; opposite direction).
