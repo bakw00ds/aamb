@@ -3,12 +3,43 @@
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---------- Hamburger (aria toggle only; panel deferred) ---------- */
+  /* ---------- Hamburger + mobile nav panel ---------- */
   var hb = document.getElementById('hamburger-btn');
-  if (hb) {
+  var mnav = document.getElementById('mobile-nav');
+
+  function setNavOpen(open) {
+    if (!hb || !mnav) return;
+    hb.setAttribute('aria-expanded', open ? 'true' : 'false');
+    hb.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    if (open) {
+      mnav.hidden = false;
+      mnav.classList.add('is-open');
+    } else {
+      mnav.classList.remove('is-open');
+      mnav.hidden = true;
+    }
+  }
+
+  if (hb && mnav) {
     hb.addEventListener('click', function () {
       var open = hb.getAttribute('aria-expanded') === 'true';
-      hb.setAttribute('aria-expanded', open ? 'false' : 'true');
+      setNavOpen(!open);
+    });
+    // Close when any in-panel anchor is tapped (link still scrolls to target)
+    mnav.addEventListener('click', function (e) {
+      var a = e.target.closest('a');
+      if (a) setNavOpen(false);
+    });
+    // ESC closes
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && hb.getAttribute('aria-expanded') === 'true') {
+        setNavOpen(false);
+        hb.focus();
+      }
+    });
+    // If viewport grows past the hamburger breakpoint while open, close it
+    window.matchMedia('(min-width: 981px)').addEventListener('change', function (ev) {
+      if (ev.matches) setNavOpen(false);
     });
   }
 
